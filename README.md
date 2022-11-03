@@ -1,3 +1,3 @@
 # Sensor_Stick
-theme: minima
+theme: Architect
 Project Website baybee
