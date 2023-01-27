@@ -7221,6 +7221,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="JP4" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X5" device="" package3d_urn="urn:adsk.eagle:package:22469/2"/>
 <part name="JP5" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X3" device="" package3d_urn="urn:adsk.eagle:package:22462/2"/>
 <part name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X2" device="" package3d_urn="urn:adsk.eagle:package:22455/2"/>
+<part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X2" device="" package3d_urn="urn:adsk.eagle:package:22455/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -7469,6 +7470,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="JP2" gate="A" x="12.7" y="-68.58" smashed="yes">
 <attribute name="NAME" x="3.81" y="-62.865" size="1.778" layer="95"/>
 <attribute name="VALUE" x="3.81" y="-73.66" size="1.778" layer="96"/>
+</instance>
+<instance part="JP1" gate="A" x="-17.78" y="2.54" smashed="yes">
+<attribute name="NAME" x="-26.67" y="8.255" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-26.67" y="-2.54" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -7926,6 +7931,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="259.08" y1="-35.56" x2="266.7" y2="-35.56" width="0.1524" layer="91"/>
 <label x="264.16" y="-35.56" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="JP1" gate="A" pin="3"/>
+<wire x1="-22.86" y1="2.54" x2="-33.02" y2="2.54" width="0.1524" layer="91"/>
+<label x="-33.02" y="2.54" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="TX" class="0">
 <segment>
@@ -7948,6 +7958,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="IC2" gate="G$1" pin="PB10"/>
 <wire x1="129.54" y1="5.08" x2="129.54" y2="-10.16" width="0.1524" layer="91"/>
 <label x="129.54" y="-10.16" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="A" pin="4"/>
+<wire x1="-15.24" y1="2.54" x2="-7.62" y2="2.54" width="0.1524" layer="91"/>
+<label x="-10.16" y="2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SPI1_SCK" class="0">
@@ -8093,6 +8108,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="132.08" y1="5.08" x2="132.08" y2="-10.16" width="0.1524" layer="91"/>
 <label x="132.08" y="-10.16" size="1.778" layer="95" rot="R90"/>
 </segment>
+<segment>
+<pinref part="JP1" gate="A" pin="2"/>
+<wire x1="-15.24" y1="5.08" x2="-7.62" y2="5.08" width="0.1524" layer="91"/>
+<label x="-10.16" y="5.08" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="USB_DP" class="0">
 <segment>
@@ -8182,6 +8202,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="C7" gate="G$1" pin="1"/>
 <wire x1="-25.4" y1="-38.1" x2="-38.1" y2="-38.1" width="0.1524" layer="91"/>
 <label x="-25.4" y="-22.86" size="1.778" layer="95" rot="R180"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="A" pin="1"/>
+<wire x1="-22.86" y1="5.08" x2="-33.02" y2="5.08" width="0.1524" layer="91"/>
+<label x="-33.02" y="5.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="5V_IN" class="0">
