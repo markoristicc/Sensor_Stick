@@ -8237,6 +8237,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="106.68" y1="5.08" x2="106.68" y2="-10.16" width="0.1524" layer="91"/>
 <label x="106.68" y="-10.16" size="1.778" layer="95" rot="R90"/>
 </segment>
+<segment>
+<pinref part="IC3" gate="G$1" pin="SDO"/>
+<wire x1="60.96" y1="-2.54" x2="63.5" y2="-2.54" width="0.1524" layer="91"/>
+<label x="60.96" y="-2.54" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="USART3_RX" class="0">
 <segment>
