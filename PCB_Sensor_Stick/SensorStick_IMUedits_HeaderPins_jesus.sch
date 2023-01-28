@@ -1858,27 +1858,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </device>
 </devices>
 </deviceset>
-<deviceset name="1.5KOHM" prefix="R">
-<description>&lt;h3&gt;1.5kΩ resistor&lt;/h3&gt;
-&lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="-0603-1/10W-1%" package="0603">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="RES-08306"/>
-<attribute name="VALUE" value="1.5k"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 </devicesets>
 </library>
 <library name="4525DO-DS5AI001DP">
@@ -2367,155 +2346,6 @@ Source: &lt;a href="https://www.st.com/resource/en/datasheet/iis2mdc.pdf"&gt; Da
 <attribute name="MANUFACTURER_PART_NUMBER" value="IIS2MDCTR" constant="no"/>
 <attribute name="MOUSER_PART_NUMBER" value="511-IIS2MDCTR" constant="no"/>
 <attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/STMicroelectronics/IIS2MDCTR?qs=1mbolxNpo8ems1K%2FRdQzXg%3D%3D" constant="no"/>
-<attribute name="MOUSER_TESTING_PART_NUMBER" value="" constant="no"/>
-<attribute name="MOUSER_TESTING_PRICE-STOCK" value="" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="USB4160-03-0230-C">
-<description>&lt;USB Connectors USB 3.2 Gen 2 Type C Rec Vert 16P SMT 3 gold 2.3mm TH stakes H= 7.46mm T+R+Cap&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
-<packages>
-<package name="USB4160030230C">
-<description>&lt;b&gt;USB4160-03-0230-C-2&lt;/b&gt;&lt;br&gt;
-</description>
-<smd name="A1" x="-2.75" y="1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="A2" x="-2.25" y="1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="A3" x="-1.75" y="1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="A4" x="-1.25" y="1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="A5" x="-0.75" y="1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="A6" x="-0.25" y="1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="A7" x="0.25" y="1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="A8" x="0.75" y="1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="A9" x="1.25" y="1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="A10" x="1.75" y="1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="A11" x="2.25" y="1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="A12" x="2.75" y="1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="B1" x="2.75" y="-1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="B2" x="2.25" y="-1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="B3" x="1.75" y="-1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="B4" x="1.25" y="-1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="B5" x="0.75" y="-1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="B6" x="0.25" y="-1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="B7" x="-0.25" y="-1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="B8" x="-0.75" y="-1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="B9" x="-1.25" y="-1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="B10" x="-1.75" y="-1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="B11" x="-2.25" y="-1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<smd name="B12" x="-2.75" y="-1.43" dx="1.15" dy="0.3" layer="1" rot="R90"/>
-<pad name="MH1" x="-4" y="1.43" drill="1.25" diameter="1.875"/>
-<pad name="MH2" x="4" y="1.43" drill="1.25" diameter="1.875"/>
-<pad name="MH3" x="-4" y="-1.43" drill="1.25" diameter="1.875"/>
-<pad name="MH4" x="4" y="-1.43" drill="1.25" diameter="1.875"/>
-<hole x="-4" y="0" drill="0.66"/>
-<hole x="4" y="0" drill="1.08"/>
-<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
-<wire x1="-4.35" y1="1.58" x2="4.35" y2="1.58" width="0.1" layer="51"/>
-<wire x1="4.35" y1="1.58" x2="4.35" y2="-1.58" width="0.1" layer="51"/>
-<wire x1="4.35" y1="-1.58" x2="-4.35" y2="-1.58" width="0.1" layer="51"/>
-<wire x1="-4.35" y1="-1.58" x2="-4.35" y2="1.58" width="0.1" layer="51"/>
-<wire x1="-5.8" y1="3.23" x2="5.8" y2="3.23" width="0.1" layer="51"/>
-<wire x1="5.8" y1="3.23" x2="5.8" y2="-3.23" width="0.1" layer="51"/>
-<wire x1="5.8" y1="-3.23" x2="-5.8" y2="-3.23" width="0.1" layer="51"/>
-<wire x1="-5.8" y1="-3.23" x2="-5.8" y2="3.23" width="0.1" layer="51"/>
-<wire x1="-2.75" y1="2.5" x2="-2.75" y2="2.5" width="0.1" layer="21"/>
-<wire x1="-2.75" y1="2.5" x2="-2.75" y2="2.6" width="0.1" layer="21" curve="180"/>
-<wire x1="-2.75" y1="2.6" x2="-2.75" y2="2.6" width="0.1" layer="21"/>
-<wire x1="-2.75" y1="2.6" x2="-2.75" y2="2.5" width="0.1" layer="21" curve="180"/>
-</package>
-</packages>
-<symbols>
-<symbol name="USB4160-03-0230-C">
-<wire x1="5.08" y1="2.54" x2="27.94" y2="2.54" width="0.254" layer="94"/>
-<wire x1="27.94" y1="-35.56" x2="27.94" y2="2.54" width="0.254" layer="94"/>
-<wire x1="27.94" y1="-35.56" x2="5.08" y2="-35.56" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-35.56" width="0.254" layer="94"/>
-<text x="29.21" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="29.21" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
-<pin name="GND_1" x="33.02" y="-2.54" length="middle" rot="R180"/>
-<pin name="SSTXP1" x="33.02" y="-5.08" length="middle" rot="R180"/>
-<pin name="SSTXN1" x="33.02" y="-7.62" length="middle" rot="R180"/>
-<pin name="VBUS_1" x="33.02" y="-10.16" length="middle" rot="R180"/>
-<pin name="CC1" x="33.02" y="-12.7" length="middle" rot="R180"/>
-<pin name="DP1" x="33.02" y="-15.24" length="middle" rot="R180"/>
-<pin name="DN1" x="33.02" y="-17.78" length="middle" rot="R180"/>
-<pin name="SBU1" x="33.02" y="-20.32" length="middle" rot="R180"/>
-<pin name="VBUS_2" x="33.02" y="-22.86" length="middle" rot="R180"/>
-<pin name="SSRXN2" x="33.02" y="-25.4" length="middle" rot="R180"/>
-<pin name="SSRXP2" x="33.02" y="-27.94" length="middle" rot="R180"/>
-<pin name="GND_2" x="33.02" y="-30.48" length="middle" rot="R180"/>
-<pin name="GND_3" x="0" y="-30.48" length="middle"/>
-<pin name="SSTXP2" x="0" y="-27.94" length="middle"/>
-<pin name="SSTXN2" x="0" y="-25.4" length="middle"/>
-<pin name="VBUS_3" x="0" y="-22.86" length="middle"/>
-<pin name="CC2" x="0" y="-20.32" length="middle"/>
-<pin name="DP2" x="0" y="-17.78" length="middle"/>
-<pin name="DN2" x="0" y="-15.24" length="middle"/>
-<pin name="SBU2" x="0" y="-12.7" length="middle"/>
-<pin name="VBUS_4" x="0" y="-10.16" length="middle"/>
-<pin name="SSRXN1" x="0" y="-7.62" length="middle"/>
-<pin name="SSRXP1" x="0" y="-5.08" length="middle"/>
-<pin name="GND_4" x="0" y="-2.54" length="middle"/>
-<pin name="MH1" x="33.02" y="0" length="middle" rot="R180"/>
-<pin name="MH2" x="33.02" y="-33.02" length="middle" rot="R180"/>
-<pin name="MH3" x="0" y="0" length="middle"/>
-<pin name="MH4" x="0" y="-33.02" length="middle"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="USB4160-03-0230-C" prefix="J">
-<description>&lt;b&gt;USB Connectors USB 3.2 Gen 2 Type C Rec Vert 16P SMT 3 gold 2.3mm TH stakes H= 7.46mm T+R+Cap&lt;/b&gt;&lt;p&gt;
-Source: &lt;a href="https://gct.co/files/drawings/usb4160.pdf"&gt; Datasheet &lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="USB4160-03-0230-C" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="USB4160030230C">
-<connects>
-<connect gate="G$1" pin="CC1" pad="A5"/>
-<connect gate="G$1" pin="CC2" pad="B5"/>
-<connect gate="G$1" pin="DN1" pad="A7"/>
-<connect gate="G$1" pin="DN2" pad="B7"/>
-<connect gate="G$1" pin="DP1" pad="A6"/>
-<connect gate="G$1" pin="DP2" pad="B6"/>
-<connect gate="G$1" pin="GND_1" pad="A1"/>
-<connect gate="G$1" pin="GND_2" pad="A12"/>
-<connect gate="G$1" pin="GND_3" pad="B1"/>
-<connect gate="G$1" pin="GND_4" pad="B12"/>
-<connect gate="G$1" pin="MH1" pad="MH1"/>
-<connect gate="G$1" pin="MH2" pad="MH2"/>
-<connect gate="G$1" pin="MH3" pad="MH3"/>
-<connect gate="G$1" pin="MH4" pad="MH4"/>
-<connect gate="G$1" pin="SBU1" pad="A8"/>
-<connect gate="G$1" pin="SBU2" pad="B8"/>
-<connect gate="G$1" pin="SSRXN1" pad="B10"/>
-<connect gate="G$1" pin="SSRXN2" pad="A10"/>
-<connect gate="G$1" pin="SSRXP1" pad="B11"/>
-<connect gate="G$1" pin="SSRXP2" pad="A11"/>
-<connect gate="G$1" pin="SSTXN1" pad="A3"/>
-<connect gate="G$1" pin="SSTXN2" pad="B3"/>
-<connect gate="G$1" pin="SSTXP1" pad="A2"/>
-<connect gate="G$1" pin="SSTXP2" pad="B2"/>
-<connect gate="G$1" pin="VBUS_1" pad="A4"/>
-<connect gate="G$1" pin="VBUS_2" pad="A9"/>
-<connect gate="G$1" pin="VBUS_3" pad="B4"/>
-<connect gate="G$1" pin="VBUS_4" pad="B9"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="ARROW_PART_NUMBER" value="" constant="no"/>
-<attribute name="ARROW_PRICE-STOCK" value="" constant="no"/>
-<attribute name="DESCRIPTION" value="USB Connectors USB 3.2 Gen 2 Type C Rec Vert 16P SMT 3 gold 2.3mm TH stakes H= 7.46mm T+R+Cap" constant="no"/>
-<attribute name="HEIGHT" value="7.66mm" constant="no"/>
-<attribute name="MANUFACTURER_NAME" value="GCT (GLOBAL CONNECTOR TECHNOLOGY)" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="USB4160-03-0230-C" constant="no"/>
-<attribute name="MOUSER_PART_NUMBER" value="640-USB4160-3-0230-C" constant="no"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/GCT/USB4160-03-0230-C?qs=vvQtp7zwQdPkHEPa2L0V1A%3D%3D" constant="no"/>
 <attribute name="MOUSER_TESTING_PART_NUMBER" value="" constant="no"/>
 <attribute name="MOUSER_TESTING_PRICE-STOCK" value="" constant="no"/>
 </technology>
@@ -7270,13 +7100,6 @@ Source: &lt;a href="https://datasheet.lcsc.com/szlcsc/JST-Sales-America-B4B-XH-A
 <part name="C12" library="SparkFun-Capacitors" deviceset="10UF" device="-0603-6.3V-20%" value="10uF"/>
 <part name="C13" library="SparkFun-Capacitors" deviceset="0.22UF" device="-0603-25V-10%" value="0.22uF"/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="USB-C" library="USB4160-03-0230-C" deviceset="USB4160-03-0230-C" device=""/>
-<part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R4" library="SparkFun-Resistors" deviceset="1.5KOHM" device="-0603-1/10W-1%" value="1.5k"/>
-<part name="R5" library="SparkFun-Resistors" deviceset="1.5KOHM" device="-0603-1/10W-1%" value="1.5k"/>
 <part name="L1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="L-US" device="L4035M" package3d_urn="urn:adsk.eagle:package:23478/2"/>
 <part name="C14" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.1UF" device="-0603-25V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="0.1uF"/>
 <part name="C15" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.1UF" device="-0603-25V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="0.1uF"/>
@@ -7298,7 +7121,7 @@ Source: &lt;a href="https://datasheet.lcsc.com/szlcsc/JST-Sales-America-B4B-XH-A
 <part name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X2" device="" package3d_urn="urn:adsk.eagle:package:22455/2"/>
 <part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X2" device="" package3d_urn="urn:adsk.eagle:package:22455/2"/>
 <part name="JST_CONNECTION" library="B4B-XH-A_LF__SN_" deviceset="B4B-XH-A_LF__SN_" device=""/>
-<part name="GND19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7449,30 +7272,6 @@ Source: &lt;a href="https://datasheet.lcsc.com/szlcsc/JST-Sales-America-B4B-XH-A
 <instance part="GND14" gate="1" x="93.98" y="104.14" smashed="yes">
 <attribute name="VALUE" x="91.44" y="101.6" size="1.778" layer="96"/>
 </instance>
-<instance part="USB-C" gate="G$1" x="152.4" y="-40.64" smashed="yes">
-<attribute name="NAME" x="181.61" y="-33.02" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="181.61" y="-35.56" size="1.778" layer="96" align="center-left"/>
-</instance>
-<instance part="GND15" gate="1" x="144.78" y="-38.1" smashed="yes" rot="R180">
-<attribute name="VALUE" x="147.32" y="-35.56" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="GND16" gate="1" x="193.04" y="-38.1" smashed="yes" rot="R180">
-<attribute name="VALUE" x="195.58" y="-35.56" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="GND17" gate="1" x="147.32" y="-76.2" smashed="yes">
-<attribute name="VALUE" x="144.78" y="-78.74" size="1.778" layer="96"/>
-</instance>
-<instance part="GND18" gate="1" x="190.5" y="-76.2" smashed="yes">
-<attribute name="VALUE" x="187.96" y="-78.74" size="1.778" layer="96"/>
-</instance>
-<instance part="R4" gate="G$1" x="134.62" y="-66.04" smashed="yes" rot="R90">
-<attribute name="NAME" x="133.096" y="-66.04" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="136.144" y="-66.04" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
-</instance>
-<instance part="R5" gate="G$1" x="200.66" y="-60.96" smashed="yes" rot="R90">
-<attribute name="NAME" x="199.136" y="-60.96" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="202.184" y="-60.96" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
-</instance>
 <instance part="L1" gate="G$1" x="233.68" y="38.1" smashed="yes" rot="R180">
 <attribute name="NAME" x="234.95" y="43.18" size="1.778" layer="95"/>
 <attribute name="VALUE" x="229.87" y="43.18" size="1.778" layer="96" rot="R270"/>
@@ -7556,8 +7355,8 @@ Source: &lt;a href="https://datasheet.lcsc.com/szlcsc/JST-Sales-America-B4B-XH-A
 <attribute name="NAME" x="199.39" y="45.72" size="1.778" layer="95" align="center-left"/>
 <attribute name="VALUE" x="199.39" y="43.18" size="1.778" layer="96" align="center-left"/>
 </instance>
-<instance part="GND19" gate="1" x="175.26" y="27.94" smashed="yes">
-<attribute name="VALUE" x="172.72" y="25.4" size="1.778" layer="96"/>
+<instance part="GND15" gate="1" x="170.18" y="35.56" smashed="yes">
+<attribute name="VALUE" x="167.64" y="33.02" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -7895,48 +7694,6 @@ Source: &lt;a href="https://datasheet.lcsc.com/szlcsc/JST-Sales-America-B4B-XH-A
 <junction x="93.98" y="106.68"/>
 </segment>
 <segment>
-<pinref part="USB-C" gate="G$1" pin="GND_4"/>
-<wire x1="152.4" y1="-43.18" x2="144.78" y2="-43.18" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="-43.18" x2="144.78" y2="-40.64" width="0.1524" layer="91"/>
-<pinref part="USB-C" gate="G$1" pin="MH3"/>
-<wire x1="144.78" y1="-40.64" x2="152.4" y2="-40.64" width="0.1524" layer="91"/>
-<pinref part="GND15" gate="1" pin="GND"/>
-<junction x="144.78" y="-40.64"/>
-</segment>
-<segment>
-<pinref part="USB-C" gate="G$1" pin="GND_1"/>
-<wire x1="185.42" y1="-43.18" x2="193.04" y2="-43.18" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="-43.18" x2="193.04" y2="-40.64" width="0.1524" layer="91"/>
-<pinref part="USB-C" gate="G$1" pin="MH1"/>
-<wire x1="193.04" y1="-40.64" x2="185.42" y2="-40.64" width="0.1524" layer="91"/>
-<pinref part="GND16" gate="1" pin="GND"/>
-<junction x="193.04" y="-40.64"/>
-</segment>
-<segment>
-<pinref part="USB-C" gate="G$1" pin="MH4"/>
-<wire x1="152.4" y1="-73.66" x2="147.32" y2="-73.66" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="-73.66" x2="147.32" y2="-71.12" width="0.1524" layer="91"/>
-<pinref part="USB-C" gate="G$1" pin="GND_3"/>
-<wire x1="147.32" y1="-71.12" x2="152.4" y2="-71.12" width="0.1524" layer="91"/>
-<pinref part="GND17" gate="1" pin="GND"/>
-<junction x="147.32" y="-73.66"/>
-<wire x1="134.62" y1="-71.12" x2="147.32" y2="-71.12" width="0.1524" layer="91"/>
-<junction x="147.32" y="-71.12"/>
-<pinref part="R4" gate="G$1" pin="1"/>
-</segment>
-<segment>
-<pinref part="USB-C" gate="G$1" pin="MH2"/>
-<wire x1="185.42" y1="-73.66" x2="190.5" y2="-73.66" width="0.1524" layer="91"/>
-<wire x1="190.5" y1="-73.66" x2="190.5" y2="-71.12" width="0.1524" layer="91"/>
-<pinref part="USB-C" gate="G$1" pin="GND_2"/>
-<wire x1="190.5" y1="-71.12" x2="185.42" y2="-71.12" width="0.1524" layer="91"/>
-<pinref part="GND18" gate="1" pin="GND"/>
-<junction x="190.5" y="-73.66"/>
-<wire x1="190.5" y1="-73.66" x2="200.66" y2="-73.66" width="0.1524" layer="91"/>
-<pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="200.66" y1="-66.04" x2="200.66" y2="-73.66" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="IMU" gate="G$1" pin="GNDA"/>
 <wire x1="93.98" y1="-68.58" x2="104.14" y2="-68.58" width="0.1524" layer="91"/>
 <pinref part="GND11" gate="1" pin="GND"/>
@@ -8021,9 +7778,11 @@ Source: &lt;a href="https://datasheet.lcsc.com/szlcsc/JST-Sales-America-B4B-XH-A
 <label x="-33.02" y="2.54" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JST_CONNECTION" gate="G$1" pin="4"/>
-<wire x1="182.88" y1="30.48" x2="175.26" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="GND19" gate="1" pin="GND"/>
+<pinref part="JST_CONNECTION" gate="G$1" pin="1"/>
+<wire x1="182.88" y1="38.1" x2="177.8" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="GND15" gate="1" pin="GND"/>
+<wire x1="177.8" y1="38.1" x2="175.26" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="38.1" x2="175.26" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TX" class="0">
@@ -8210,16 +7969,6 @@ Source: &lt;a href="https://datasheet.lcsc.com/szlcsc/JST-Sales-America-B4B-XH-A
 <label x="149.86" y="53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="USB-C" gate="G$1" pin="DP2"/>
-<wire x1="152.4" y1="-58.42" x2="139.7" y2="-58.42" width="0.1524" layer="91"/>
-<label x="139.7" y="-58.42" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="USB-C" gate="G$1" pin="DP1"/>
-<wire x1="185.42" y1="-55.88" x2="195.58" y2="-55.88" width="0.1524" layer="91"/>
-<label x="185.42" y="-55.88" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="JST_CONNECTION" gate="G$1" pin="2"/>
 <wire x1="182.88" y1="35.56" x2="175.26" y2="35.56" width="0.1524" layer="91"/>
 <label x="175.26" y="35.56" size="1.778" layer="95"/>
@@ -8302,11 +8051,6 @@ Source: &lt;a href="https://datasheet.lcsc.com/szlcsc/JST-Sales-America-B4B-XH-A
 <wire x1="-22.86" y1="5.08" x2="-33.02" y2="5.08" width="0.1524" layer="91"/>
 <label x="-33.02" y="5.08" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="JST_CONNECTION" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="38.1" x2="175.26" y2="38.1" width="0.1524" layer="91"/>
-<label x="175.26" y="38.1" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="5V_IN" class="0">
 <segment>
@@ -8315,24 +8059,9 @@ Source: &lt;a href="https://datasheet.lcsc.com/szlcsc/JST-Sales-America-B4B-XH-A
 <label x="-48.26" y="-33.02" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="USB-C" gate="G$1" pin="VBUS_4"/>
-<wire x1="152.4" y1="-50.8" x2="142.24" y2="-50.8" width="0.1524" layer="91"/>
-<label x="142.24" y="-50.8" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="USB-C" gate="G$1" pin="VBUS_1"/>
-<wire x1="185.42" y1="-50.8" x2="195.58" y2="-50.8" width="0.1524" layer="91"/>
-<label x="193.04" y="-50.8" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="USB-C" gate="G$1" pin="VBUS_3"/>
-<wire x1="152.4" y1="-63.5" x2="147.32" y2="-63.5" width="0.1524" layer="91"/>
-<label x="147.32" y="-63.5" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="USB-C" gate="G$1" pin="VBUS_2"/>
-<wire x1="185.42" y1="-63.5" x2="190.5" y2="-63.5" width="0.1524" layer="91"/>
-<label x="187.96" y="-63.5" size="1.778" layer="95"/>
+<pinref part="JST_CONNECTION" gate="G$1" pin="4"/>
+<wire x1="182.88" y1="30.48" x2="175.26" y2="30.48" width="0.1524" layer="91"/>
+<label x="175.26" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -8446,32 +8175,7 @@ Source: &lt;a href="https://datasheet.lcsc.com/szlcsc/JST-Sales-America-B4B-XH-A
 <label x="83.82" y="129.54" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$10" class="0">
-<segment>
-<pinref part="USB-C" gate="G$1" pin="CC2"/>
-<wire x1="152.4" y1="-60.96" x2="134.62" y2="-60.96" width="0.1524" layer="91"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="USB-C" gate="G$1" pin="CC1"/>
-<wire x1="185.42" y1="-53.34" x2="200.66" y2="-53.34" width="0.1524" layer="91"/>
-<pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="200.66" y1="-53.34" x2="200.66" y2="-55.88" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="USB_DN" class="0">
-<segment>
-<pinref part="USB-C" gate="G$1" pin="DN2"/>
-<wire x1="152.4" y1="-55.88" x2="139.7" y2="-55.88" width="0.1524" layer="91"/>
-<label x="139.7" y="-55.88" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="USB-C" gate="G$1" pin="DN1"/>
-<wire x1="185.42" y1="-58.42" x2="195.58" y2="-58.42" width="0.1524" layer="91"/>
-<label x="185.42" y="-58.42" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="MICROCONTROLLER" gate="G$1" pin="PA11"/>
 <wire x1="144.78" y1="50.8" x2="157.48" y2="50.8" width="0.1524" layer="91"/>
