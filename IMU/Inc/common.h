@@ -15,7 +15,7 @@ extern "C" {
 #include <stdio.h>
 
 #include "bmi08x_defs.h"
-
+#include "main.h"
 /**
  * Structure defining a handle describing BMI085 SPI on STm32
  */
@@ -29,7 +29,8 @@ typedef struct {
 	/**
 	 * The port of the NSS pin.
 	 */
-	GPIO_TypeDef *nss_port;
+	GPIO_TypeDef *nssa_port;
+	GPIO_TypeDef *nssg_port;
 
 	/**
 	 * The NSS pin.
@@ -46,6 +47,8 @@ typedef struct {
 	 * The RST pin.
 	 */
 	uint16_t ps_pin;
+
+	TIM_HandleTypeDef* timer_ptr;
 
 } bmi085_handle_t;
 

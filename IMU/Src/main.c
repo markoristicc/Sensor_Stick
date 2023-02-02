@@ -53,7 +53,7 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-SPI_HandleTypeDef hspi2;
+SPI_HandleTypeDef hspi1;
 
 TIM_HandleTypeDef htim2;
 
@@ -65,6 +65,8 @@ UART_HandleTypeDef huart2;
 /* global variables */
 /*********************************************************************/
 unsigned char data_sync_int = false;
+unsigned char accel_data_ready = false;
+unsigned char gyro_data_ready = false;
 
 /*! @brief This structure containing relevant bmi08x info */
 struct bmi08x_dev bmi08xdev;
@@ -92,9 +94,9 @@ struct bmi08x_sensor_data bmi08x_gyro;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
-static void MX_SPI2_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_USART2_UART_Init(void);
+static void MX_SPI1_Init(void);
 /* USER CODE BEGIN PFP */
 
 /*********************************************************************/
@@ -173,12 +175,12 @@ static int8_t init_bmi08x_get_data(void) {
 		bmi08x_error_codes_print_result("bmi08g_init", rslt);
 	}
 
-    if (rslt == BMI08X_OK)
-    {
-        printf("Uploading config file !\n");
-        rslt = bmi08a_load_config_file(&bmi08xdev);
-        bmi08x_error_codes_print_result("bmi08a_load_config_file", rslt);
-    }
+//    if (rslt == BMI08X_OK)
+//    {
+//        printf("Uploading config file !\n");
+//        rslt = bmi08a_load_config_file(&bmi08xdev);
+//        bmi08x_error_codes_print_result("bmi08a_load_config_file", rslt);
+//    }
 
 	if (rslt == BMI08X_OK) {
 		bmi08xdev.accel_cfg.odr = BMI08X_ACCEL_ODR_1600_HZ;
@@ -549,17 +551,23 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_SPI2_Init();
   MX_TIM2_Init();
   MX_USART2_UART_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
 
 	int8_t rslt;
 	float x = 0.0, y = 0.0, z = 0.0;
 
-	bmi085_handle_t bmi085_handle = { .spi_handle = &hspi2, .nss_port = GPIOC,
-			.nssa_pin = BMI085a_NSS_Pin, .nssg_pin = BMI085g_NSS_Pin, .ps_pin =
-			BMI085_PS_Pin, .ps_port = GPIOC };
+	bmi085_handle_t bmi085_handle = {
+			.spi_handle = &hspi1,
+			.nssg_port = GPIOC,
+			.nssa_port = GPIOB,
+			.nssa_pin = BMI085a_NSS_Pin,
+			.nssg_pin = BMI085g_NSS_Pin,
+			.ps_pin = BMI085_PS_Pin,
+			.ps_port = GPIOC,
+			.timer_ptr= &htim2 };
 	/* Interface given as parameter
 	 *           For I2C : BMI08X_I2C_INTF
 	 *           For SPI : BMI08X_SPI_INTF
@@ -567,16 +575,20 @@ int main(void)
 	 *          For BMI085 : BMI085_VARIANT
 	 *          For BMI088 : BMI088_VARIANT
 	 */
-	init_handle();
+//	HAL_GPIO_WritePin(GPIOB, LED_Pin, GPIO_PIN_SET);
+
+	init_handle(&bmi085_handle);
+
 	rslt = bmi08x_interface_init(&bmi08xdev, BMI08X_SPI_INTF, BMI085_VARIANT);
 	bmi08x_error_codes_print_result("bmi08x_interface_init", rslt);
 
 	/* Initialize the sensors */
-	init_bmi08x_sync(&bmi085_handle);
+	init_bmi08x_get_data();
 
 	/* Enable data ready interrupts */
-	enable_bmi08x_data_synchronization_interrupt();
-	uint32_t start_time = HAL_GetTick();
+//	enable_bmi08x_data_synchronization_interrupt();
+//	uint32_t start_time = HAL_GetTick();
+	enable_bmi08x_interrupt();
 
 	printf("Accel data range : 16G for BMI085 and 24G for BMI088\n");
 	printf("Gyro data range : 250 dps for BMI085 and BMI088\n\n");
@@ -648,23 +660,23 @@ int main(void)
 					"\t  Acc_ms2_X = %4.2f,  Acc_ms2_Y = %4.2f,  Acc_ms2_Z = %4.2f\n\r",
 					x, y, z);
 		}
-		if(gyro_data_ready == true && (bmi08xdev.gyro_cfg.power == BMI08X_GYRO_PM_NORMAL)){
-			gyro_data_ready = false;
-
-			rslt = bmi08g_get_data(&bmi08x_gyro, &bmi08xdev);
-									bmi08x_error_codes_print_result("bmi08g_get_data",
-											rslt);
-
-			/* Converting lsb to degree per second for 16 bit gyro at 250 dps range. */
-			x = lsb_to_dps(bmi08x_gyro.x, 250, 16);
-			y = lsb_to_dps(bmi08x_gyro.y, 250, 16);
-			z = lsb_to_dps(bmi08x_gyro.z, 250, 16);
-
-			/* Print the data in dps. */
-			printf(
-					"\t  Gyr_DPS_X = %4.2f  , Gyr_DPS_Y = %4.2f  , Gyr_DPS_Z = %4.2f\n\r",
-					x, y, z);
-		}
+//		if(gyro_data_ready == true && (bmi08xdev.gyro_cfg.power == BMI08X_GYRO_PM_NORMAL)){
+//			gyro_data_ready = false;
+//
+//			rslt = bmi08g_get_data(&bmi08x_gyro, &bmi08xdev);
+//									bmi08x_error_codes_print_result("bmi08g_get_data",
+//											rslt);
+//
+//			/* Converting lsb to degree per second for 16 bit gyro at 250 dps range. */
+//			x = lsb_to_dps(bmi08x_gyro.x, 250, 16);
+//			y = lsb_to_dps(bmi08x_gyro.y, 250, 16);
+//			z = lsb_to_dps(bmi08x_gyro.z, 250, 16);
+//
+//			/* Print the data in dps. */
+//			printf(
+//					"\t  Gyr_DPS_X = %4.2f  , Gyr_DPS_Y = %4.2f  , Gyr_DPS_Z = %4.2f\n\r",
+//					x, y, z);
+//		}
 	}
 
   /* USER CODE END 3 */
@@ -715,42 +727,42 @@ void SystemClock_Config(void)
 }
 
 /**
-  * @brief SPI2 Initialization Function
+  * @brief SPI1 Initialization Function
   * @param None
   * @retval None
   */
-static void MX_SPI2_Init(void)
+static void MX_SPI1_Init(void)
 {
 
-  /* USER CODE BEGIN SPI2_Init 0 */
+  /* USER CODE BEGIN SPI1_Init 0 */
 
-  /* USER CODE END SPI2_Init 0 */
+  /* USER CODE END SPI1_Init 0 */
 
-  /* USER CODE BEGIN SPI2_Init 1 */
+  /* USER CODE BEGIN SPI1_Init 1 */
 
-  /* USER CODE END SPI2_Init 1 */
-  /* SPI2 parameter configuration*/
-  hspi2.Instance = SPI2;
-  hspi2.Init.Mode = SPI_MODE_MASTER;
-  hspi2.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi2.Init.DataSize = SPI_DATASIZE_8BIT;
-  hspi2.Init.CLKPolarity = SPI_POLARITY_LOW;
-  hspi2.Init.CLKPhase = SPI_PHASE_1EDGE;
-  hspi2.Init.NSS = SPI_NSS_SOFT;
-  hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
-  hspi2.Init.FirstBit = SPI_FIRSTBIT_MSB;
-  hspi2.Init.TIMode = SPI_TIMODE_DISABLE;
-  hspi2.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
-  hspi2.Init.CRCPolynomial = 7;
-  hspi2.Init.CRCLength = SPI_CRC_LENGTH_DATASIZE;
-  hspi2.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
-  if (HAL_SPI_Init(&hspi2) != HAL_OK)
+  /* USER CODE END SPI1_Init 1 */
+  /* SPI1 parameter configuration*/
+  hspi1.Instance = SPI1;
+  hspi1.Init.Mode = SPI_MODE_MASTER;
+  hspi1.Init.Direction = SPI_DIRECTION_2LINES;
+  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
+  hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
+  hspi1.Init.NSS = SPI_NSS_SOFT;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+  hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
+  hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
+  hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+  hspi1.Init.CRCPolynomial = 7;
+  hspi1.Init.CRCLength = SPI_CRC_LENGTH_DATASIZE;
+  hspi1.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
+  if (HAL_SPI_Init(&hspi1) != HAL_OK)
   {
     Error_Handler();
   }
-  /* USER CODE BEGIN SPI2_Init 2 */
+  /* USER CODE BEGIN SPI1_Init 2 */
 
-  /* USER CODE END SPI2_Init 2 */
+  /* USER CODE END SPI1_Init 2 */
 
 }
 
@@ -844,15 +856,18 @@ static void MX_GPIO_Init(void)
   GPIO_InitTypeDef GPIO_InitStruct = {0};
 
   /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, BMI085g_NSS_Pin|BMI085_PS_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(BMI085a_NSS_GPIO_Port, BMI085a_NSS_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, BMI085g_NSS_Pin|BMI085_PS_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(BMI085a_NSS_GPIO_Port, BMI085a_NSS_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin : BMI085_Accel_DR_INT_Pin */
   GPIO_InitStruct.Pin = BMI085_Accel_DR_INT_Pin;
@@ -866,19 +881,19 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(BMI085_Gyro_DR_INT_GPIO_Port, &GPIO_InitStruct);
 
+  /*Configure GPIO pins : LED_Pin BMI085a_NSS_Pin */
+  GPIO_InitStruct.Pin = LED_Pin|BMI085a_NSS_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
   /*Configure GPIO pins : BMI085g_NSS_Pin BMI085_PS_Pin */
   GPIO_InitStruct.Pin = BMI085g_NSS_Pin|BMI085_PS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : BMI085a_NSS_Pin */
-  GPIO_InitStruct.Pin = BMI085a_NSS_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(BMI085a_NSS_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI0_IRQn, 0, 0);
@@ -895,12 +910,16 @@ static void MX_GPIO_Init(void)
 void EXTI4_IRQHandler()
 {
 //    data_sync_int = true;
-	accel_data_ready = true;
+	gyro_data_ready = true;
+
+	HAL_GPIO_EXTI_IRQHandler(BMI085_Gyro_DR_INT_Pin);
 }
 void EXTI0_IRQHandler()
 {
 //    data_sync_int = true;
-	gyro_data_ready = true;
+	accel_data_ready = true;
+
+	HAL_GPIO_EXTI_IRQHandler(BMI085_Accel_DR_INT_Pin);
 }
 
 /*!

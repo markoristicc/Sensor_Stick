@@ -29,18 +29,26 @@ bmi085_handle_t bmi085_handle;
 void init_handle(bmi085_handle_t *handle){
 
 	bmi085_handle.spi_handle = handle->spi_handle;
-	bmi085_handle.nss_port =  handle->nss_port;
+	bmi085_handle.nssa_port =  handle->nssa_port;
+	bmi085_handle.nssg_port =  handle->nssg_port;
 	bmi085_handle.nssa_pin =  handle->nssa_pin;
 	bmi085_handle.nssg_pin =  handle->nssg_pin;
 	bmi085_handle.ps_pin = handle->ps_pin;
 	bmi085_handle.ps_port =  handle->ps_port;
+	bmi085_handle.timer_ptr = handle->timer_ptr;
 }
 
-BMI08X_INTF_RET_TYPE bmi08x_spi_read(uint8_t reg_addr, uint8_t *reg_data,
-		size_t len, void *intf_ptr) {
-	uint8_t dev_addr = *(uint8_t*) intf_ptr;
+BMI08X_INTF_RET_TYPE bmi08x_spi_read(uint8_t reg_addr, uint8_t *reg_data, uint32_t len, void *intf_ptr) {
 
-	HAL_GPIO_WritePin(bmi085_handle.nss_port, dev_addr, GPIO_PIN_RESET);
+	uint16_t dev_addr = BMI085a_NSS_Pin;
+	GPIO_TypeDef *port = bmi085_handle.nssa_port;
+
+	if(intf_ptr == &gyro_dev_add){
+		port = bmi085_handle.nssg_port;
+		dev_addr = BMI085g_NSS_Pin;
+	}
+
+	HAL_GPIO_WritePin(port, dev_addr, GPIO_PIN_RESET);
 
 //	uint8_t transmit_buffer = (uint8_t)reg & 0x7fu;
 
@@ -58,7 +66,7 @@ BMI08X_INTF_RET_TYPE bmi08x_spi_read(uint8_t reg_addr, uint8_t *reg_data,
 		return 1;
 	}
 
-	HAL_GPIO_WritePin(bmi085_handle.nss_port, dev_addr, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(port, dev_addr, GPIO_PIN_SET);
 
 	return 0;
 }
@@ -66,11 +74,17 @@ BMI08X_INTF_RET_TYPE bmi08x_spi_read(uint8_t reg_addr, uint8_t *reg_data,
 
 BMI08X_INTF_RET_TYPE bmi08x_spi_write(uint8_t reg_addr, const uint8_t *reg_data,
 		uint32_t len, void *intf_ptr) {
-	uint8_t dev_addr = *(uint8_t*) intf_ptr;
+
+	uint16_t dev_addr = BMI085a_NSS_Pin;
+	GPIO_TypeDef *port = bmi085_handle.nssa_port;
+
+	if(intf_ptr == &gyro_dev_add){
+		port = bmi085_handle.nssg_port;
+		dev_addr = BMI085g_NSS_Pin;
+	}
 
 
-
-	HAL_GPIO_WritePin(bmi085_handle.nss_port, dev_addr, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(port, dev_addr, GPIO_PIN_RESET);
 
 	if (HAL_SPI_Transmit(bmi085_handle.spi_handle, &reg_addr, 1, 50)
 			!= HAL_OK) {
@@ -82,7 +96,7 @@ BMI08X_INTF_RET_TYPE bmi08x_spi_write(uint8_t reg_addr, const uint8_t *reg_data,
 		return 1;
 	}
 
-	HAL_GPIO_WritePin(bmi085_handle.nss_port, dev_addr, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(port, dev_addr, GPIO_PIN_SET);
 	return 0;
 }
 /*!
@@ -90,8 +104,8 @@ BMI08X_INTF_RET_TYPE bmi08x_spi_write(uint8_t reg_addr, const uint8_t *reg_data,
  */
 void bmi08x_delay_us(uint32_t period, void *intf_ptr) {
 //    coines_delay_usec(period);
-	__HAL_TIM_SET_COUNTER(&htim2, 0);  // set the counter value a 0
-	while (__HAL_TIM_GET_COUNTER(&htim2) < period)
+	__HAL_TIM_SET_COUNTER(bmi085_handle.timer_ptr, 0);  // set the counter value a 0
+	while (__HAL_TIM_GET_COUNTER(bmi085_handle.timer_ptr) < period)
 		;  // wait for the counter to reach the us input in the parameter
 }
 

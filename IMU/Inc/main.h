@@ -63,6 +63,8 @@ void Error_Handler(void);
 #define BMI085_Gyro_DR_INT_Pin GPIO_PIN_0
 #define BMI085_Gyro_DR_INT_GPIO_Port GPIOB
 #define BMI085_Gyro_DR_INT_EXTI_IRQn EXTI0_IRQn
+#define LED_Pin GPIO_PIN_13
+#define LED_GPIO_Port GPIOB
 #define BMI085g_NSS_Pin GPIO_PIN_6
 #define BMI085g_NSS_GPIO_Port GPIOC
 #define BMI085_PS_Pin GPIO_PIN_8

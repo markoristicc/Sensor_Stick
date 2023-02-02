@@ -758,7 +758,7 @@ int8_t bmi08a_init(struct bmi08x_dev *dev)
         {
             /* Set dummy byte in case of SPI interface */
             dev->dummy_byte = BMI08X_ENABLE;
-
+            printf("Dev correct\n\r");
             /* Dummy read of Chip-ID in SPI mode */
             rslt = get_regs(BMI08X_REG_ACCEL_CHIP_ID, &chip_id, 1, dev);
         }
