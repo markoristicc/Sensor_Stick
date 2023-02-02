@@ -21,9 +21,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <math.h>
-#include <string.h>
-#include <stdio.h>
+#include "DPS310.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -41,31 +40,21 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-I2C_HandleTypeDef hi2c3;
+I2C_HandleTypeDef hi2c2;
 
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
-static void MX_I2C3_Init(void);
+static void MX_I2C2_Init(void);
 /* USER CODE BEGIN PFP */
-#ifdef __GNUC__
-#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
-#else
-#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
-#endif
 
-PUTCHAR_PROTOTYPE
-{
-  HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
-  return ch;
-}
-void DPMeasurement(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -77,9 +66,11 @@ void DPMeasurement(void);
   * @brief  The application entry point.
   * @retval int
   */
+
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -101,19 +92,22 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
-  MX_I2C3_Init();
+  MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
+  DPS310_Start();
+
+
   while (1)
   {
-	DPMeasurement();
-    /* USER CODE END WHILE */
+	  DPS310_GetPress();
+	  HAL_Delay(1000);
 
-    /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
@@ -168,50 +162,50 @@ void SystemClock_Config(void)
 }
 
 /**
-  * @brief I2C3 Initialization Function
+  * @brief I2C2 Initialization Function
   * @param None
   * @retval None
   */
-static void MX_I2C3_Init(void)
+static void MX_I2C2_Init(void)
 {
 
-  /* USER CODE BEGIN I2C3_Init 0 */
+  /* USER CODE BEGIN I2C2_Init 0 */
 
-  /* USER CODE END I2C3_Init 0 */
+  /* USER CODE END I2C2_Init 0 */
 
-  /* USER CODE BEGIN I2C3_Init 1 */
+  /* USER CODE BEGIN I2C2_Init 1 */
 
-  /* USER CODE END I2C3_Init 1 */
-  hi2c3.Instance = I2C3;
-  hi2c3.Init.Timing = 0x10909CEC;
-  hi2c3.Init.OwnAddress1 = 0;
-  hi2c3.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
-  hi2c3.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
-  hi2c3.Init.OwnAddress2 = 0;
-  hi2c3.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
-  hi2c3.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
-  hi2c3.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
-  if (HAL_I2C_Init(&hi2c3) != HAL_OK)
+  /* USER CODE END I2C2_Init 1 */
+  hi2c2.Instance = I2C2;
+  hi2c2.Init.Timing = 0x10909CEC;
+  hi2c2.Init.OwnAddress1 = 0;
+  hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c2.Init.OwnAddress2 = 0;
+  hi2c2.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
+  hi2c2.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c2.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c2) != HAL_OK)
   {
     Error_Handler();
   }
 
   /** Configure Analogue filter
   */
-  if (HAL_I2CEx_ConfigAnalogFilter(&hi2c3, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
+  if (HAL_I2CEx_ConfigAnalogFilter(&hi2c2, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
   {
     Error_Handler();
   }
 
   /** Configure Digital filter
   */
-  if (HAL_I2CEx_ConfigDigitalFilter(&hi2c3, 0) != HAL_OK)
+  if (HAL_I2CEx_ConfigDigitalFilter(&hi2c2, 0) != HAL_OK)
   {
     Error_Handler();
   }
-  /* USER CODE BEGIN I2C3_Init 2 */
+  /* USER CODE BEGIN I2C2_Init 2 */
 
-  /* USER CODE END I2C3_Init 2 */
+  /* USER CODE END I2C2_Init 2 */
 
 }
 
@@ -300,37 +294,7 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-/*value is equal to 80%*16383/(Pmax-Pmin) * (Pressure_Applied - P_min) + 10% * 16383
-		 *minimum value is 0x0666 and max value is 0x399A
-		 * as 0.1 * 16383 = 1638.3 = 0x0666
-		 * and (0.8 * 16383)/(Pmax-Pmin) * (Pmax-Pmin) + 0.1 * 16383 =  0.9 * 16383 = 14745 = 0x3999 //off by 1 but thats fine
-		 * value = (0.8*16383)/(Pmax-Pmin)*(Papplied-Pmin) + 0.1*16383 -> P_min + (value - 1638)(Pmax-Pmin)/13106 = P_applied
-		 * For us P_min = -20 & P_max = +20
-		 */
-void DPMeasurement(void){
-	static const uint8_t DP_ADDR = 0x28<<1; // Use 8-bit address
-	static const uint8_t REG_DP = 0x00;
-	HAL_StatusTypeDef ret;
-	uint8_t buf[12];
-	buf[0] = REG_DP;
-	ret = HAL_I2C_Master_Transmit(&hi2c3, DP_ADDR, buf, 1, HAL_MAX_DELAY);
-	if ( ret != HAL_OK ) {
-	   perror("Transmit Error \n");
-	} else {
-	  // Read 2 bytes from the DP register
-	  ret = HAL_I2C_Master_Receive(&hi2c3, DP_ADDR, buf, 2, HAL_MAX_DELAY);
-	  if ( ret != HAL_OK ) {
-		perror("Reception Error");
-	  } else {
-		int16_t val = (((int16_t)buf[0] << 8) & 0x4F00) | (buf[1]); //getting value from sensor
-		float diffPressure = 40*((float)val - 1638)/13106; //this is DP in PSI need to convert to Pascal
-		diffPressure = diffPressure * 6894.76;
-		float dpAirspeed = (diffPressure*2)/1.225;
-		dpAirspeed = sqrt(dpAirspeed); //conversion from DP to velocity
-		printf("%f \n",dpAirspeed);
-	  }
-	}
-}
+
 /* USER CODE END 4 */
 
 /**
