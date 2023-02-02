@@ -46,8 +46,6 @@ I2C_HandleTypeDef hi2c3;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-static const uint8_t DP_ADDR = 0x28<<1; // Use 8-bit address
-static const uint8_t REG_DP = 0x00;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -310,6 +308,8 @@ static void MX_GPIO_Init(void)
 		 * For us P_min = -20 & P_max = +20
 		 */
 void DPMeasurement(void){
+	static const uint8_t DP_ADDR = 0x28<<1; // Use 8-bit address
+	static const uint8_t REG_DP = 0x00;
 	HAL_StatusTypeDef ret;
 	uint8_t buf[12];
 	buf[0] = REG_DP;
