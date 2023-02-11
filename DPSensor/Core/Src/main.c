@@ -313,7 +313,7 @@ void DPMeasurement(void){
 	HAL_StatusTypeDef ret;
 	uint8_t buf[12];
 	buf[0] = REG_DP;
-	ret = HAL_I2C_Master_Transmit(&hi2c3, DP_ADDR, buf, 1, HAL_MAX_DELAY);
+	ret = HAL_I2C_Master_Transmit(&hi2c3, DP_ADDR, buf, 0, HAL_MAX_DELAY);
 	if ( ret != HAL_OK ) {
 	   perror("Transmit Error \n");
 	} else {
