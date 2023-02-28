@@ -46,6 +46,7 @@ I2C_HandleTypeDef hi2c3;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
+static const uint8_t DP_ADDR = 0x28<<1;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -231,7 +232,7 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
+  huart2.Init.BaudRate = 9600;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
@@ -277,6 +278,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : PC3 */
+  GPIO_InitStruct.Pin = GPIO_PIN_3;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
   /*Configure GPIO pins : SMPS_EN_Pin SMPS_V1_Pin SMPS_SW_Pin */
   GPIO_InitStruct.Pin = SMPS_EN_Pin|SMPS_V1_Pin|SMPS_SW_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -297,6 +304,10 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LD4_GPIO_Port, &GPIO_InitStruct);
 
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI3_IRQn);
+
 }
 
 /* USER CODE BEGIN 4 */
@@ -307,29 +318,34 @@ static void MX_GPIO_Init(void)
 		 * value = (0.8*16383)/(Pmax-Pmin)*(Papplied-Pmin) + 0.1*16383 -> P_min + (value - 1638)(Pmax-Pmin)/13106 = P_applied
 		 * For us P_min = -20 & P_max = +20
 		 */
+
+/*
+ *
+ *
+ *
+ *
+ */
 void DPMeasurement(void){
-	static const uint8_t DP_ADDR = 0x28<<1; // Use 8-bit address
-	static const uint8_t REG_DP = 0x00;
 	HAL_StatusTypeDef ret;
-	uint8_t buf[12];
-	buf[0] = REG_DP;
-	ret = HAL_I2C_Master_Transmit(&hi2c3, DP_ADDR, buf, 0, HAL_MAX_DELAY);
-	if ( ret != HAL_OK ) {
-	   perror("Transmit Error \n");
-	} else {
-	  // Read 2 bytes from the DP register
-	  ret = HAL_I2C_Master_Receive(&hi2c3, DP_ADDR, buf, 2, HAL_MAX_DELAY);
-	  if ( ret != HAL_OK ) {
-		perror("Reception Error");
-	  } else {
-		int16_t val = (((int16_t)buf[0] << 8) & 0x4F00) | (buf[1]); //getting value from sensor
-		float diffPressure = 40*((float)val - 1638)/13106; //this is DP in PSI need to convert to Pascal
-		diffPressure = diffPressure * 6894.76;
-		float dpAirspeed = (diffPressure*2)/1.225;
-		dpAirspeed = sqrt(dpAirspeed); //conversion from DP to velocity
-		printf("%f \n",dpAirspeed);
-	  }
+	uint8_t* buf;
+	for(int i = 0; i < 4; i++){
+		buf[i] = 0;
 	}
+	HAL_Delay(3);
+	ret = HAL_I2C_Master_Receive(&hi2c3, DP_ADDR, buf, 4, HAL_MAX_DELAY);
+	int16_t val = (((int16_t)(buf[0]) << 8) & 0x3F00) | buf[1]; //getting value from sensor
+	int16_t temp = (((int16_t)(buf[2]) << 3) & 0x7F8) | buf[3]>>5;
+	if(ret != HAL_OK){
+		perror( "how did i get here");
+	}
+	val = val - 0x2000;
+	val = abs(val);
+	float diffP = (float)(val * 20)/6554;
+	float vel = (diffP * 2)/1.225;
+	vel = sqrt(vel);
+	printf("%f \r\n", vel);
+	printf("%i \r\n", temp);
+	HAL_Delay(2000);
 }
 /* USER CODE END 4 */
 
