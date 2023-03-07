@@ -47,6 +47,7 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 static const uint8_t DP_ADDR = 0x28<<1;
+uint8_t* buf;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -166,6 +167,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+  HAL_RCC_MCOConfig(RCC_MCO1, RCC_MCO1SOURCE_SYSCLK, RCC_MCODIV_1);
 }
 
 /**
@@ -272,14 +274,8 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LD4_GPIO_Port, LD4_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : B1_Pin */
-  GPIO_InitStruct.Pin = B1_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : PC3 */
-  GPIO_InitStruct.Pin = GPIO_PIN_3;
+  /*Configure GPIO pins : B1_Pin PC3 */
+  GPIO_InitStruct.Pin = B1_Pin|GPIO_PIN_3;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
@@ -304,6 +300,14 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LD4_GPIO_Port, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : PA8 */
+  GPIO_InitStruct.Pin = GPIO_PIN_8;
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Alternate = GPIO_AF0_MCO;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI3_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(EXTI3_IRQn);
@@ -327,11 +331,9 @@ static void MX_GPIO_Init(void)
  */
 void DPMeasurement(void){
 	HAL_StatusTypeDef ret;
-	uint8_t* buf;
 	for(int i = 0; i < 4; i++){
 		buf[i] = 0;
 	}
-	HAL_Delay(3);
 	ret = HAL_I2C_Master_Receive(&hi2c3, DP_ADDR, buf, 4, HAL_MAX_DELAY);
 	int16_t val = (((int16_t)(buf[0]) << 8) & 0x3F00) | buf[1]; //getting value from sensor
 	int16_t temp = (((int16_t)(buf[2]) << 3) & 0x7F8) | buf[3]>>5;
@@ -345,7 +347,12 @@ void DPMeasurement(void){
 	vel = sqrt(vel);
 	printf("%f \r\n", vel);
 	printf("%i \r\n", temp);
-	HAL_Delay(2000);
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+  if(GPIO_Pin == GPIO_PIN_3){
+	  DPMeasurement();
+  }
 }
 /* USER CODE END 4 */
 
