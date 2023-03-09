@@ -42,6 +42,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 I2C_HandleTypeDef hi2c3;
+DMA_HandleTypeDef hdma_i2c3_tx;
 
 UART_HandleTypeDef huart2;
 
@@ -53,6 +54,7 @@ uint8_t* buf;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_I2C3_Init(void);
 /* USER CODE BEGIN PFP */
@@ -102,6 +104,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_USART2_UART_Init();
   MX_I2C3_Init();
   /* USER CODE BEGIN 2 */
@@ -254,6 +257,22 @@ static void MX_USART2_UART_Init(void)
 }
 
 /**
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void)
+{
+
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Channel2_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel2_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel2_IRQn);
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -334,7 +353,7 @@ void DPMeasurement(void){
 	for(int i = 0; i < 4; i++){
 		buf[i] = 0;
 	}
-	ret = HAL_I2C_Master_Receive(&hi2c3, DP_ADDR, buf, 4, HAL_MAX_DELAY);
+	ret = HAL_I2C_Master_Receive_DMA(&hi2c3, DP_ADDR, buf, 4, HAL_MAX_DELAY);
 	int16_t val = (((int16_t)(buf[0]) << 8) & 0x3F00) | buf[1]; //getting value from sensor
 	int16_t temp = (((int16_t)(buf[2]) << 3) & 0x7F8) | buf[3]>>5;
 	if(ret != HAL_OK){
