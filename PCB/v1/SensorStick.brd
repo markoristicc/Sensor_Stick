@@ -210,6 +210,8 @@ Capstone</text>
 <text x="1.778" y="30.226" size="1.27" layer="21">JST</text>
 <text x="16.764" y="40.386" size="1.27" layer="21">PWR</text>
 <text x="51.816" y="0.762" size="1.27" layer="21">MAG</text>
+<dimension x1="-0.508" y1="0" x2="-0.508" y2="44.45" x3="-1.524" y3="22.225" textsize="1.778" layer="1" unit="inch"/>
+<dimension x1="0" y1="45.212" x2="76.2" y2="45.212" x3="38.1" y3="46.228" textsize="1.778" layer="1" unit="inch"/>
 </plain>
 <libraries>
 <library name="SparkFun-Capacitors">
