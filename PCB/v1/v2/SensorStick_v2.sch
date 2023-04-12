@@ -4221,9 +4221,9 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <label x="175.26" y="45.72" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="8"/>
-<wire x1="-111.76" y1="-33.02" x2="-88.9" y2="-33.02" width="0.1524" layer="91"/>
-<label x="-101.6" y="-33.02" size="1.778" layer="95"/>
+<wire x1="-111.76" y1="-71.12" x2="-88.9" y2="-71.12" width="0.1524" layer="91"/>
+<pinref part="JP5" gate="A" pin="2"/>
+<label x="-99.06" y="-71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="I2C1_SCL" class="0">
@@ -4233,9 +4233,9 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <label x="177.8" y="45.72" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="6"/>
-<wire x1="-111.76" y1="-30.48" x2="-88.9" y2="-30.48" width="0.1524" layer="91"/>
-<label x="-101.6" y="-30.48" size="1.778" layer="95"/>
+<wire x1="-142.24" y1="-71.12" x2="-119.38" y2="-71.12" width="0.1524" layer="91"/>
+<pinref part="JP5" gate="A" pin="1"/>
+<label x="-139.7" y="-71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="3V3" class="0">
@@ -4660,6 +4660,11 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <label x="-5.08" y="111.76" size="1.778" layer="95" rot="R90"/>
 <pinref part="R8" gate="G$1" pin="1"/>
 </segment>
+<segment>
+<wire x1="-111.76" y1="-73.66" x2="-86.36" y2="-73.66" width="0.1524" layer="91"/>
+<pinref part="JP5" gate="A" pin="4"/>
+<label x="-99.06" y="-73.66" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="I2C3_SDA" class="0">
 <segment>
@@ -4673,6 +4678,11 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <wire x1="-10.16" y1="127" x2="-10.16" y2="119.38" width="0.1524" layer="91"/>
 <label x="-10.16" y="114.3" size="1.778" layer="95" rot="R90"/>
 <pinref part="R9" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<wire x1="-111.76" y1="-55.88" x2="-88.9" y2="-55.88" width="0.1524" layer="91"/>
+<label x="-101.6" y="-55.88" size="1.778" layer="95"/>
+<pinref part="JP2" gate="A" pin="2"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -4737,9 +4747,9 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <pinref part="IC1" gate="G$1" pin="PA5"/>
 </segment>
 <segment>
-<wire x1="-111.76" y1="-25.4" x2="-88.9" y2="-25.4" width="0.1524" layer="91"/>
-<label x="-101.6" y="-25.4" size="1.778" layer="95"/>
-<pinref part="JP1" gate="A" pin="2"/>
+<wire x1="-111.76" y1="-58.42" x2="-88.9" y2="-58.42" width="0.1524" layer="91"/>
+<label x="-101.6" y="-58.42" size="1.778" layer="95"/>
+<pinref part="JP2" gate="A" pin="4"/>
 </segment>
 </net>
 <net name="SPI1_MISO" class="0">
@@ -4777,9 +4787,9 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <pinref part="IC1" gate="G$1" pin="PA7"/>
 </segment>
 <segment>
-<wire x1="-119.38" y1="-33.02" x2="-139.7" y2="-33.02" width="0.1524" layer="91"/>
-<label x="-139.7" y="-33.02" size="1.778" layer="95"/>
-<pinref part="JP1" gate="A" pin="7"/>
+<wire x1="-88.9" y1="-30.48" x2="-111.76" y2="-30.48" width="0.1524" layer="91"/>
+<label x="-101.6" y="-30.48" size="1.778" layer="95"/>
+<pinref part="JP1" gate="A" pin="6"/>
 </segment>
 </net>
 <net name="IMU_INT4" class="0">
@@ -4946,20 +4956,6 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <pinref part="IC1" gate="G$1" pin="PH0-OSC_IN"/>
 <wire x1="162.56" y1="10.16" x2="142.24" y2="10.16" width="0.1524" layer="91"/>
 <label x="142.24" y="10.16" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="I2C3_SCL1" class="0">
-<segment>
-<wire x1="-111.76" y1="-73.66" x2="-86.36" y2="-73.66" width="0.1524" layer="91"/>
-<pinref part="JP5" gate="A" pin="4"/>
-<label x="-99.06" y="-73.66" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="I2C3_SDA1" class="0">
-<segment>
-<wire x1="-111.76" y1="-76.2" x2="-86.36" y2="-76.2" width="0.1524" layer="91"/>
-<pinref part="JP5" gate="A" pin="6"/>
-<label x="-99.06" y="-76.2" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GPIO_EXTI2" class="0">
