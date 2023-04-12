@@ -5070,7 +5070,6 @@ Source: &lt;a href="https://ecsxtal.com/store/pdf/ECS-TXO-3225MV.pdf"&gt; Datash
 <part name="C23" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.1UF" device="-0603-25V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="0.1uF"/>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R4" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="10KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="10k"/>
 <part name="L2" library="BLM03AG601SN1D" deviceset="BLM03AG601SN1D" device=""/>
 <part name="L4" library="BLM03AG601SN1D" deviceset="BLM03AG601SN1D" device=""/>
 <part name="L5" library="BLM03AG601SN1D" deviceset="BLM03AG601SN1D" device=""/>
@@ -5360,10 +5359,6 @@ Source: &lt;a href="https://ecsxtal.com/store/pdf/ECS-TXO-3225MV.pdf"&gt; Datash
 <instance part="GND22" gate="1" x="-139.7" y="132.08" smashed="yes">
 <attribute name="VALUE" x="-142.24" y="129.54" size="1.778" layer="96"/>
 </instance>
-<instance part="R4" gate="G$1" x="-50.8" y="104.14" smashed="yes" rot="R90">
-<attribute name="NAME" x="-52.324" y="104.14" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="-49.276" y="104.14" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
-</instance>
 <instance part="L2" gate="A" x="101.6" y="-71.12" smashed="yes">
 <attribute name="VALUE" x="86.9188" y="-80.4672" size="3.4798" layer="96" ratio="10" rot="SR0"/>
 <attribute name="NAME" x="87.9856" y="-75.3872" size="3.4798" layer="95" ratio="10" rot="SR0"/>
@@ -5646,11 +5641,6 @@ Source: &lt;a href="https://ecsxtal.com/store/pdf/ECS-TXO-3225MV.pdf"&gt; Datash
 <label x="-187.96" y="144.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="-50.8" y1="109.22" x2="-50.8" y2="116.84" width="0.1524" layer="91"/>
-<label x="-50.8" y="114.3" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="170.18" y1="-25.4" x2="177.8" y2="-25.4" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="-25.4" x2="185.42" y2="-25.4" width="0.1524" layer="91"/>
@@ -5705,6 +5695,12 @@ Source: &lt;a href="https://ecsxtal.com/store/pdf/ECS-TXO-3225MV.pdf"&gt; Datash
 <pinref part="JP2" gate="A" pin="1"/>
 <wire x1="307.34" y1="-27.94" x2="299.72" y2="-27.94" width="0.1524" layer="91"/>
 <label x="297.18" y="-27.94" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="Y1" gate="G$1" pin="TRI-STATE"/>
+<wire x1="-182.88" y1="139.7" x2="-193.04" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="-193.04" y1="139.7" x2="-193.04" y2="132.08" width="0.1524" layer="91"/>
+<label x="-193.04" y="132.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="USART1_RX" class="0">
@@ -6480,18 +6476,16 @@ Source: &lt;a href="https://ecsxtal.com/store/pdf/ECS-TXO-3225MV.pdf"&gt; Datash
 <pinref part="U1" gate="A" pin="CH4_IN"/>
 </segment>
 <segment>
-<pinref part="S2" gate="G$1" pin="1"/>
-<pinref part="S2" gate="G$1" pin="2"/>
-<wire x1="-45.72" y1="93.98" x2="-50.8" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="-50.8" y1="93.98" x2="-71.12" y2="93.98" width="0.1524" layer="91"/>
-<junction x="-50.8" y="93.98"/>
-<wire x1="-71.12" y1="93.98" x2="-78.74" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="-50.8" y1="93.98" x2="-50.8" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="C23" gate="G$1" pin="1"/>
 <wire x1="-71.12" y1="86.36" x2="-71.12" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="S2" gate="G$1" pin="1"/>
+<wire x1="-71.12" y1="93.98" x2="-50.8" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="S2" gate="G$1" pin="2"/>
+<wire x1="-50.8" y1="93.98" x2="-45.72" y2="93.98" width="0.1524" layer="91"/>
+<junction x="-50.8" y="93.98"/>
+<wire x1="-71.12" y1="93.98" x2="-78.74" y2="93.98" width="0.1524" layer="91"/>
 <junction x="-71.12" y="93.98"/>
 <label x="-78.74" y="93.98" size="1.778" layer="95"/>
-<pinref part="R4" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="DP" class="0">
