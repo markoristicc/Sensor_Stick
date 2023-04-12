@@ -430,26 +430,6 @@ Christine Wan</text>
 <smd name="6" x="1.435" y="0.95" dx="0.84" dy="0.4" layer="1" roundness="50" rot="R180"/>
 <smd name="7" x="0" y="0" dx="1.625" dy="2.365" layer="1" rot="R180" cream="no"/>
 </package>
-<package name="XTAL_ABLS-8.000MHZ-B2-T">
-<wire x1="-5.7" y1="-2.35" x2="-5.7" y2="2.35" width="0.127" layer="51"/>
-<wire x1="-5.7" y1="2.35" x2="5.7" y2="2.35" width="0.127" layer="51"/>
-<wire x1="5.7" y1="2.35" x2="5.7" y2="-2.35" width="0.127" layer="51"/>
-<wire x1="5.7" y1="-2.35" x2="-5.7" y2="-2.35" width="0.127" layer="51"/>
-<wire x1="-5.7" y1="1.42" x2="-5.7" y2="2.35" width="0.127" layer="21"/>
-<wire x1="-5.7" y1="2.35" x2="5.7" y2="2.35" width="0.127" layer="21"/>
-<wire x1="5.7" y1="2.35" x2="5.7" y2="1.42" width="0.127" layer="21"/>
-<wire x1="-5.7" y1="-1.42" x2="-5.7" y2="-2.35" width="0.127" layer="21"/>
-<wire x1="-5.7" y1="-2.35" x2="5.7" y2="-2.35" width="0.127" layer="21"/>
-<wire x1="5.7" y1="-2.35" x2="5.7" y2="-1.42" width="0.127" layer="21"/>
-<wire x1="-7.8" y1="-2.6" x2="-7.8" y2="2.6" width="0.05" layer="39"/>
-<wire x1="-7.8" y1="2.6" x2="7.8" y2="2.6" width="0.05" layer="39"/>
-<wire x1="7.8" y1="2.6" x2="7.8" y2="-2.6" width="0.05" layer="39"/>
-<wire x1="7.8" y1="-2.6" x2="-7.8" y2="-2.6" width="0.05" layer="39"/>
-<text x="-7.800590625" y="2.7002" size="1.2701" layer="25">&gt;NAME</text>
-<text x="-7.901140625" y="-3.900559375" size="1.27018125" layer="27">&gt;VALUE</text>
-<smd name="1" x="-4.75" y="0" dx="5.6" dy="2.1" layer="1"/>
-<smd name="2" x="4.75" y="0" dx="5.6" dy="2.1" layer="1"/>
-</package>
 </packages>
 </library>
 <library name="STM32L412RBT6P">
@@ -588,29 +568,6 @@ Christine Wan</text>
 </package>
 </packages>
 </library>
-<library name="GQM2195C2E4R7BB12D(4_7p)">
-<description>&lt;Capacitor GQM21 L=2.0mm W=1.25mm T=0.85mm&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
-<packages>
-<package name="CAPC2012X100N">
-<description>&lt;b&gt;GQM21 L=2.0mm W=1.25mm T=0.85mm&lt;/b&gt;&lt;br&gt;
-</description>
-<smd name="1" x="-0.82" y="0" dx="1.43" dy="0.94" layer="1" rot="R90"/>
-<smd name="2" x="0.82" y="0" dx="1.43" dy="0.94" layer="1" rot="R90"/>
-<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
-<wire x1="-1.44" y1="0.87" x2="1.44" y2="0.87" width="0.05" layer="51"/>
-<wire x1="1.44" y1="0.87" x2="1.44" y2="-0.87" width="0.05" layer="51"/>
-<wire x1="1.44" y1="-0.87" x2="-1.44" y2="-0.87" width="0.05" layer="51"/>
-<wire x1="-1.44" y1="-0.87" x2="-1.44" y2="0.87" width="0.05" layer="51"/>
-<wire x1="-1" y1="0.625" x2="1" y2="0.625" width="0.1" layer="51"/>
-<wire x1="1" y1="0.625" x2="1" y2="-0.625" width="0.1" layer="51"/>
-<wire x1="1" y1="-0.625" x2="-1" y2="-0.625" width="0.1" layer="51"/>
-<wire x1="-1" y1="-0.625" x2="-1" y2="0.625" width="0.1" layer="51"/>
-<wire x1="0" y1="0.525" x2="0" y2="-0.525" width="0.2" layer="21"/>
-</package>
-</packages>
-</library>
 <library name="GRT21BC71H475KE13L(4_7u)">
 <description>&lt;GRT21BC71H475KE13_ (0805, X7S:EIA, 4.7uF, DC50V)&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
@@ -653,29 +610,6 @@ Christine Wan</text>
 <wire x1="1.6" y1="-0.8" x2="-1.6" y2="-0.8" width="0.1" layer="51"/>
 <wire x1="-1.6" y1="-0.8" x2="-1.6" y2="0.8" width="0.1" layer="51"/>
 <wire x1="0" y1="0.7" x2="0" y2="-0.7" width="0.2" layer="21"/>
-</package>
-</packages>
-</library>
-<library name="RC0805FR-10220RL">
-<description>&lt;Thick Film Resistors - SMD 220 OHM 1%&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
-<packages>
-<package name="RESC2012X60N">
-<description>&lt;b&gt;0805-4&lt;/b&gt;&lt;br&gt;
-</description>
-<smd name="1" x="-0.95" y="0" dx="1.4" dy="0.95" layer="1" rot="R90"/>
-<smd name="2" x="0.95" y="0" dx="1.4" dy="0.95" layer="1" rot="R90"/>
-<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
-<wire x1="-1.675" y1="0.95" x2="1.675" y2="0.95" width="0.05" layer="51"/>
-<wire x1="1.675" y1="0.95" x2="1.675" y2="-0.95" width="0.05" layer="51"/>
-<wire x1="1.675" y1="-0.95" x2="-1.675" y2="-0.95" width="0.05" layer="51"/>
-<wire x1="-1.675" y1="-0.95" x2="-1.675" y2="0.95" width="0.05" layer="51"/>
-<wire x1="-1" y1="0.625" x2="1" y2="0.625" width="0.1" layer="51"/>
-<wire x1="1" y1="0.625" x2="1" y2="-0.625" width="0.1" layer="51"/>
-<wire x1="1" y1="-0.625" x2="-1" y2="-0.625" width="0.1" layer="51"/>
-<wire x1="-1" y1="-0.625" x2="-1" y2="0.625" width="0.1" layer="51"/>
-<wire x1="0" y1="0.525" x2="0" y2="-0.525" width="0.2" layer="21"/>
 </package>
 </packages>
 </library>
@@ -966,23 +900,6 @@ Christine Wan</text>
 <description>Generated from &lt;b&gt;ce-capstone-2022.sch&lt;/b&gt;&lt;p&gt;
 by exp-lbrs.ulp</description>
 <packages>
-<package name="DST310S_32.768KHZ_DST310S32768KHZ">
-<description>&lt;b&gt;DST310S 32.768KHz-1&lt;/b&gt;&lt;br&gt;</description>
-<wire x1="-1.6" y1="0.75" x2="1.6" y2="0.75" width="0.2" layer="51"/>
-<wire x1="1.6" y1="0.75" x2="1.6" y2="-0.75" width="0.2" layer="51"/>
-<wire x1="1.6" y1="-0.75" x2="-1.6" y2="-0.75" width="0.2" layer="51"/>
-<wire x1="-1.6" y1="-0.75" x2="-1.6" y2="0.75" width="0.2" layer="51"/>
-<wire x1="-2.75" y1="1.9" x2="2.75" y2="1.9" width="0.1" layer="51"/>
-<wire x1="2.75" y1="1.9" x2="2.75" y2="-1.9" width="0.1" layer="51"/>
-<wire x1="2.75" y1="-1.9" x2="-2.75" y2="-1.9" width="0.1" layer="51"/>
-<wire x1="-2.75" y1="-1.9" x2="-2.75" y2="1.9" width="0.1" layer="51"/>
-<wire x1="-0.4" y1="0.75" x2="0.4" y2="0.75" width="0.1" layer="21"/>
-<wire x1="-0.4" y1="-0.75" x2="0.4" y2="-0.75" width="0.1" layer="21"/>
-<smd name="1" x="-1.25" y="0" dx="1.8" dy="1" layer="1" rot="R90"/>
-<smd name="2" x="1.25" y="0" dx="1.8" dy="1" layer="1" rot="R90"/>
-<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
-</package>
 <package name="SWITCH-TACT_DTSM-6">
 <circle x="0" y="0" radius="1.75" width="0.2032" layer="51"/>
 <circle x="0" y="0" radius="1.75" width="0.2032" layer="21"/>
@@ -1020,28 +937,6 @@ by exp-lbrs.ulp</description>
 <smd name="2" x="1.7" y="0" dx="1.2" dy="0.75" layer="1"/>
 <text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
 <text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
-</package>
-</packages>
-</library>
-<library name="CC0402KPX7R7BB104(0402cap_foot)">
-<description>&lt;Multilayer Ceramic Capacitors MLCC - SMD/SMT 16 V 0.1uF X7R 0402 10%&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
-<packages>
-<package name="CAPC1005X55N">
-<description>&lt;b&gt;CC0402--0&lt;/b&gt;&lt;br&gt;
-</description>
-<smd name="1" x="-0.46" y="0" dx="0.62" dy="0.6" layer="1" rot="R90"/>
-<smd name="2" x="0.46" y="0" dx="0.62" dy="0.6" layer="1" rot="R90"/>
-<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
-<wire x1="-0.91" y1="0.46" x2="0.91" y2="0.46" width="0.05" layer="51"/>
-<wire x1="0.91" y1="0.46" x2="0.91" y2="-0.46" width="0.05" layer="51"/>
-<wire x1="0.91" y1="-0.46" x2="-0.91" y2="-0.46" width="0.05" layer="51"/>
-<wire x1="-0.91" y1="-0.46" x2="-0.91" y2="0.46" width="0.05" layer="51"/>
-<wire x1="-0.5" y1="0.25" x2="0.5" y2="0.25" width="0.1" layer="51"/>
-<wire x1="0.5" y1="0.25" x2="0.5" y2="-0.25" width="0.1" layer="51"/>
-<wire x1="0.5" y1="-0.25" x2="-0.5" y2="-0.25" width="0.1" layer="51"/>
-<wire x1="-0.5" y1="-0.25" x2="-0.5" y2="0.25" width="0.1" layer="51"/>
 </package>
 </packages>
 </library>
@@ -1781,15 +1676,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="PACKAGE" value="DFN-6 STMicroelectronics" x="1.502" y="-39.192" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="PRICE" value="None" x="1.502" y="-39.192" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="Y1" library="ce-capstone" package="XTAL_ABLS-8.000MHZ-B2-T" value="8MHz" x="4.558" y="10.601" smashed="yes" rot="R90">
-<attribute name="AVAILABILITY" value="Unavailable" x="31.228" y="52.511" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DESCRIPTION" value=" 8MHz ±20ppm Crystal 18pF 80 Ohms HC-49/US " x="31.228" y="52.511" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MF" value="Abracon LLC" x="31.228" y="52.511" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MP" value="ABLS-8.000MHZ-B2" x="31.228" y="52.511" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="7.3402" y="3.954590625" size="0.6096" layer="25" rot="R270"/>
-<attribute name="PACKAGE" value="HC-49/US Abracon LLC" x="31.228" y="52.511" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE" value="None" x="31.228" y="52.511" size="1.778" layer="27" rot="R90" display="off"/>
-</element>
 <element name="IC1" library="STM32L412RBT6P" package="QFP50P1200X1200X160-64N" value="STM32L412RBT6" x="26.193" y="25.744" smashed="yes">
 <attribute name="DESCRIPTION" value="ARM Microcontrollers - MCU" x="26.193" y="25.744" size="1.778" layer="27" display="off"/>
 <attribute name="HEIGHT" value="1.6mm" x="26.193" y="25.744" size="1.778" layer="27" display="off"/>
@@ -1916,15 +1802,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Murata-Electronics/GRT31C5C2A104JA12L?qs=rI7uf1IzohSpYGEFBFd58g%3D%3D" x="18.147" y="19.64" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="18.109" y="22.24" size="0.6096" layer="25" align="center"/>
 </element>
-<element name="C37" library="GQM2195C2E4R7BB12D(4_7p)" package="CAPC2012X100N" value="4.7p" x="16.8522" y="38.0574" smashed="yes" rot="R180">
-<attribute name="DESCRIPTION" value="Capacitor GQM21 L=2.0mm W=1.25mm T=0.85mm" x="16.8522" y="38.0574" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="HEIGHT" value="1mm" x="16.8522" y="38.0574" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="Murata Electronics" x="16.8522" y="38.0574" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="GQM2195C2E4R7BB12D" x="16.8522" y="38.0574" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MOUSER_PART_NUMBER" value="81-GQM2195C2E4R7BB2D" x="16.8522" y="38.0574" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Murata-Electronics/GQM2195C2E4R7BB12D?qs=0JbGSuRBwBOIE8NOw5EJ%2FA%3D%3D" x="16.8522" y="38.0574" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="14.9562" y="38.0654" size="0.6096" layer="25" rot="R270" align="center"/>
-</element>
 <element name="C39" library="GRT21BC71H475KE13L(4_7u)" package="CAPC2012X145N" value="4.7u" x="20.992" y="35.886" smashed="yes">
 <attribute name="DESCRIPTION" value="GRT21BC71H475KE13_ (0805, X7S:EIA, 4.7uF, DC50V)" x="20.992" y="35.886" size="1.778" layer="27" display="off"/>
 <attribute name="HEIGHT" value="1.45mm" x="20.992" y="35.886" size="1.778" layer="27" display="off"/>
@@ -1943,15 +1820,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Murata-Electronics/GRM31CR73A103KW03L?qs=hNud%2FORuBR1TymPCs4fJcA%3D%3D" x="13.38" y="19.695" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="13.337" y="22.256" size="0.6096" layer="25" rot="R180" align="center"/>
 </element>
-<element name="C2" library="GQM2195C2E4R7BB12D(4_7p)" package="CAPC2012X100N" value="4.7p" x="16.91" y="30.617" smashed="yes" rot="R180">
-<attribute name="DESCRIPTION" value="Capacitor GQM21 L=2.0mm W=1.25mm T=0.85mm" x="16.91" y="30.617" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="HEIGHT" value="1mm" x="16.91" y="30.617" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="Murata Electronics" x="16.91" y="30.617" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="GQM2195C2E4R7BB12D" x="16.91" y="30.617" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MOUSER_PART_NUMBER" value="81-GQM2195C2E4R7BB2D" x="16.91" y="30.617" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Murata-Electronics/GQM2195C2E4R7BB12D?qs=0JbGSuRBwBOIE8NOw5EJ%2FA%3D%3D" x="16.91" y="30.617" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="15.063" y="30.607" size="0.6096" layer="25" rot="R270" align="center"/>
-</element>
 <element name="C4" library="GRM219R61H105KA73D(1u)" package="CAPC2012X95N" value="1u" x="35.167" y="7.46" smashed="yes" rot="R180">
 <attribute name="DESCRIPTION" value="MURATA - GRM219R61H105KA73D - CAP, MLCC, X5R, 1UF, 50V, 0805" x="32.881" y="7.46" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="HEIGHT" value="0.95mm" x="32.881" y="7.46" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1960,15 +1828,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="MOUSER_PART_NUMBER" value="81-GRM219R61H105KA3D" x="32.881" y="7.46" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Murata-Electronics/GRM219R61H105KA73D?qs=O5cugoO6nweiD1nCQ5vS9w%3D%3D" x="32.881" y="7.46" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="37.06" y="7.833" size="0.6096" layer="25" rot="R90" align="center"/>
-</element>
-<element name="R4" library="RC0805FR-10220RL" package="RESC2012X60N" value="220" x="8.3" y="12.292" smashed="yes" rot="R270">
-<attribute name="DESCRIPTION" value="Thick Film Resistors - SMD 220 OHM 1%" x="8.3" y="12.292" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="HEIGHT" value="0.6mm" x="8.3" y="12.292" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="KEMET" x="8.3" y="12.292" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="RC0805FR-10220RL" x="8.3" y="12.292" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MOUSER_PART_NUMBER" value="603-RC0805FR-10220RL" x="8.3" y="12.292" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/YAGEO/RC0805FR-10220RL?qs=m6lXFsvg5e0JpfeoSKi9%252BQ%3D%3D" x="8.3" y="12.292" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="9.638" y="11.075" size="0.6096" layer="25" rot="R90" align="center"/>
 </element>
 <element name="R6" library="RC0805FR-131KL" package="RESC2012X60N" value="1K" x="35.4" y="9.7" smashed="yes" rot="R180">
 <attribute name="DESCRIPTION" value="Thick Film Resistors - SMD 1 kOhms 250 mW 0805 1%" x="35.4" y="9.7" size="1.778" layer="27" rot="R180" display="off"/>
@@ -2041,17 +1900,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="POPULARITY" value="47" x="45.339" y="21.717" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="40.894" y="26.797" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="J1" library="ce-capstone-2022" package="DST310S_32.768KHZ_DST310S32768KHZ" value="DST310S_32.768KHZ" x="17.3736" y="34.3408" smashed="yes" rot="R270">
-<attribute name="ARROW_PART_NUMBER" value="" x="17.3736" y="34.3408" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="ARROW_PRICE-STOCK" value="" x="17.3736" y="34.3408" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DESCRIPTION" value="SMD Crystal Resonators 32.768KHz +/-20ppm SMD-3215_2P RoHS" x="17.3736" y="34.3408" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="HEIGHT" value="0.85mm" x="17.3736" y="34.3408" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="KDS Daishinku" x="17.3736" y="34.3408" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="DST310S 32.768KHz" x="17.3736" y="34.3408" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MOUSER_PART_NUMBER" value="" x="17.3736" y="34.3408" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MOUSER_PRICE-STOCK" value="" x="17.3736" y="34.3408" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="14.9098" y="36.6014" size="0.6096" layer="25" rot="R270" align="center"/>
-</element>
 <element name="S1" library="ce-capstone-2022" package="SWITCH-TACT_DTSM-6" value="SWITCH-TACT_DTSM-6" x="28.0162" y="39.2938" smashed="yes">
 <attribute name="NAME" x="30.099" y="35.3568" size="0.6096" layer="25"/>
 </element>
@@ -2065,24 +1913,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="MOUSER_PART_NUMBER" value="621-1N5819HW-F" x="43.9674" y="4.064" size="1.778" layer="27" display="off"/>
 <attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/1N5819HW-7-F?qs=NQ47qNm99eDyWTEd07miYA%3D%3D" x="43.9674" y="4.064" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="45.9232" y="2.794" size="0.6096" layer="25" align="center"/>
-</element>
-<element name="C35" library="CC0402KPX7R7BB104(0402cap_foot)" package="CAPC1005X55N" value="20p" x="7.874" y="15.9766" smashed="yes" rot="R270">
-<attribute name="DESCRIPTION" value="Multilayer Ceramic Capacitors MLCC - SMD/SMT 16 V 0.1uF X7R 0402 10%" x="7.874" y="15.9766" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="HEIGHT" value="0.55mm" x="7.874" y="15.9766" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="YAGEO" x="7.874" y="15.9766" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="CC0402KPX7R7BB104" x="7.874" y="15.9766" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MOUSER_PART_NUMBER" value="603-CC402KPX7R7BB104" x="7.874" y="15.9766" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/YAGEO/CC0402KPX7R7BB104?qs=7s%252B3O6pAiyDFg2%2FesnFI7w%3D%3D" x="7.874" y="15.9766" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="8.6868" y="15.7988" size="0.6096" layer="25" rot="R270" align="center"/>
-</element>
-<element name="C3" library="CC0402KPX7R7BB104(0402cap_foot)" package="CAPC1005X55N" value="20p" x="8.2804" y="8.1534" smashed="yes" rot="R270">
-<attribute name="DESCRIPTION" value="Multilayer Ceramic Capacitors MLCC - SMD/SMT 16 V 0.1uF X7R 0402 10%" x="8.2804" y="8.1534" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="HEIGHT" value="0.55mm" x="8.2804" y="8.1534" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="YAGEO" x="8.2804" y="8.1534" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="CC0402KPX7R7BB104" x="8.2804" y="8.1534" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MOUSER_PART_NUMBER" value="603-CC402KPX7R7BB104" x="8.2804" y="8.1534" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/YAGEO/CC0402KPX7R7BB104?qs=7s%252B3O6pAiyDFg2%2FesnFI7w%3D%3D" x="8.2804" y="8.1534" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="9.2202" y="8.5344" size="0.6096" layer="25" rot="R270" align="center"/>
 </element>
 <element name="U1" library="BMI088" package="QFN_BMI085_BOS" value="BMI088" x="72.4662" y="41.656" smashed="yes">
 <attribute name="COPYRIGHT" value="Copyright (C) 2023 Ultra Librarian. All rights reserved." x="72.4662" y="41.656" size="1.778" layer="27" display="off"/>
@@ -2269,8 +2099,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <contactref element="C34" pad="2"/>
 <contactref element="C33" pad="2"/>
 <contactref element="C39" pad="2"/>
-<contactref element="C2" pad="2"/>
-<contactref element="C37" pad="2"/>
 <contactref element="C1" pad="1"/>
 <contactref element="C25" pad="1"/>
 <contactref element="U2" pad="2"/>
@@ -2413,11 +2241,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="34.455" y1="28.994" x2="34.844" y2="29.383" width="0.2032" layer="1"/>
 <wire x1="34.844" y1="29.383" x2="37.227" y2="29.383" width="0.2032" layer="1"/>
 <wire x1="37.227" y1="29.383" x2="37.253" y2="29.357" width="0.2032" layer="1"/>
-<wire x1="16.0322" y1="38.0574" x2="16.0322" y2="33.6852" width="0.2032" layer="1"/>
-<wire x1="15.9004" y1="33.5534" x2="16.0322" y2="33.6852" width="0.2032" layer="1"/>
-<via x="15.9004" y="33.5534" extent="1-16" drill="0.35"/>
-<wire x1="15.9004" y1="33.5534" x2="15.9004" y2="30.8066" width="0.2032" layer="1"/>
-<wire x1="15.9004" y1="30.8066" x2="16.09" y2="30.617" width="0.2032" layer="1"/>
 <wire x1="21.936" y1="38.811" x2="21.936" y2="37.708" width="0.2032" layer="1"/>
 <wire x1="21.936" y1="37.708" x2="21.446" y2="37.218" width="0.2032" layer="1"/>
 <wire x1="22.733" y1="47.117" x2="24.638" y2="47.117" width="0.2032" layer="1"/>
@@ -2460,14 +2283,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="21.446" y1="37.218" x2="22.7768" y2="37.218" width="0.2032" layer="1"/>
 <wire x1="22.7768" y1="37.218" x2="23.867" y2="37.218" width="0.2032" layer="1"/>
 <wire x1="23.867" y1="37.218" x2="24.0412" y2="37.0438" width="0.2032" layer="1"/>
-<contactref element="C35" pad="2"/>
-<contactref element="C3" pad="2"/>
-<wire x1="7.874" y1="15.5166" x2="7.874" y2="14.8336" width="0.2032" layer="1"/>
-<wire x1="7.874" y1="14.8336" x2="8.1026" y2="14.605" width="0.2032" layer="1"/>
-<via x="8.1026" y="14.605" extent="1-16" drill="0.35"/>
-<wire x1="8.2804" y1="7.6934" x2="8.2804" y2="6.7818" width="0.2032" layer="1"/>
-<wire x1="8.2804" y1="6.7818" x2="8.2296" y2="6.731" width="0.2032" layer="1"/>
-<via x="8.2296" y="6.731" extent="1-16" drill="0.35"/>
 <contactref element="BAROMETER" pad="1"/>
 <contactref element="BAROMETER" pad="7"/>
 <contactref element="C6" pad="2"/>
@@ -2481,64 +2296,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <contactref element="IMU" pad="6"/>
 <contactref element="IMU" pad="7"/>
 <contactref element="C24" pad="2"/>
-<wire x1="49.403" y1="45.212" x2="49.403" y2="49.403" width="0" layer="19" extent="1-1"/>
-<wire x1="45.212" y1="49.403" x2="49.403" y2="49.403" width="0" layer="19" extent="1-1"/>
-<wire x1="40.894" y1="49.403" x2="45.212" y2="49.403" width="0" layer="19" extent="1-1"/>
-<wire x1="49.403" y1="40.64" x2="49.403" y2="45.212" width="0" layer="19" extent="1-1"/>
-<wire x1="49.403" y1="36.195" x2="49.403" y2="40.64" width="0" layer="19" extent="1-1"/>
-<wire x1="46.482" y1="34.798" x2="49.403" y2="36.195" width="0" layer="19" extent="1-1"/>
-<wire x1="49.403" y1="27.305" x2="46.609" y2="25.527" width="0" layer="19" extent="1-1"/>
-<wire x1="49.403" y1="31.623" x2="46.482" y2="34.798" width="0" layer="19" extent="1-1"/>
-<wire x1="49.403" y1="22.225" x2="46.609" y2="25.527" width="0" layer="19" extent="1-1"/>
-<wire x1="49.403" y1="17.653" x2="49.403" y2="22.225" width="0" layer="19" extent="1-1"/>
-<wire x1="36.068" y1="49.403" x2="40.894" y2="49.403" width="0" layer="19" extent="1-1"/>
-<wire x1="30.861" y1="49.403" x2="36.068" y2="49.403" width="0" layer="19" extent="1-1"/>
-<wire x1="26.035" y1="49.403" x2="30.861" y2="49.403" width="0" layer="19" extent="1-1"/>
-<wire x1="24.638" y1="47.117" x2="26.035" y2="49.403" width="0" layer="19" extent="1-1"/>
-<wire x1="20.701" y1="49.403" x2="22.733" y2="47.117" width="0" layer="19" extent="1-1"/>
-<wire x1="14.986" y1="49.403" x2="20.701" y2="49.403" width="0" layer="19" extent="1-1"/>
-<wire x1="10.414" y1="49.403" x2="14.986" y2="49.403" width="0" layer="19" extent="1-1"/>
-<wire x1="5.588" y1="49.403" x2="10.414" y2="49.403" width="0" layer="19" extent="1-1"/>
-<wire x1="1.397" y1="49.403" x2="5.588" y2="49.403" width="0" layer="19" extent="1-1"/>
-<wire x1="1.397" y1="44.196" x2="1.397" y2="49.403" width="0" layer="19" extent="1-1"/>
-<wire x1="1.397" y1="38.862" x2="1.397" y2="44.196" width="0" layer="19" extent="1-1"/>
-<wire x1="1.397" y1="33.782" x2="1.397" y2="38.862" width="0" layer="19" extent="1-1"/>
-<wire x1="1.397" y1="28.956" x2="1.397" y2="33.782" width="0" layer="19" extent="1-1"/>
-<wire x1="3.81" y1="27.432" x2="1.397" y2="28.956" width="0" layer="19" extent="1-1"/>
-<wire x1="1.397" y1="23.495" x2="2.211" y2="26.018" width="0" layer="19" extent="1-1"/>
-<wire x1="1.4" y1="17.635" x2="1.397" y2="23.495" width="0" layer="19" extent="1-1"/>
-<wire x1="1.4" y1="12.189" x2="1.4" y2="17.635" width="0" layer="19" extent="1-1"/>
-<wire x1="1.4" y1="7.089" x2="1.4" y2="12.189" width="0" layer="19" extent="1-1"/>
-<wire x1="1.4" y1="1.4" x2="1.4" y2="7.089" width="0" layer="19" extent="1-1"/>
-<wire x1="7.112" y1="1.397" x2="1.4" y2="1.4" width="0" layer="19" extent="1-1"/>
-<wire x1="8.2296" y1="6.731" x2="7.112" y2="1.397" width="0" layer="19" extent="1-1"/>
-<wire x1="12.7" y1="1.397" x2="7.112" y2="1.397" width="0" layer="19" extent="1-1"/>
-<wire x1="14.478" y1="3.556" x2="12.7" y2="1.397" width="0" layer="19" extent="1-1"/>
-<wire x1="17.907" y1="1.397" x2="15.748" y2="2.032" width="0" layer="19" extent="1-1"/>
-<wire x1="23.368" y1="1.397" x2="17.907" y2="1.397" width="0" layer="19" extent="1-1"/>
-<wire x1="28.448" y1="1.397" x2="23.368" y2="1.397" width="0" layer="19" extent="1-1"/>
-<wire x1="33" y1="2.3" x2="28.448" y2="1.397" width="0" layer="19" extent="1-1"/>
-<wire x1="33.909" y1="1.397" x2="33" y2="2.3" width="0" layer="19" extent="1-1"/>
-<wire x1="38.862" y1="1.397" x2="38.332" y2="3.988" width="0" layer="19" extent="1-1"/>
-<wire x1="41.275" y1="9.652" x2="37.887" y2="9.247" width="0" layer="19" extent="1-1"/>
-<wire x1="44.704" y1="12.573" x2="42.304" y2="9.632" width="0" layer="19" extent="1-1"/>
-<wire x1="44.196" y1="1.397" x2="38.862" y2="1.397" width="0" layer="19" extent="1-1"/>
-<wire x1="49.403" y1="1.397" x2="44.196" y2="1.397" width="0" layer="19" extent="1-1"/>
-<wire x1="49.403" y1="5.08" x2="49.403" y2="1.397" width="0" layer="19" extent="1-1"/>
-<wire x1="7.874" y1="15.5166" x2="1.4" y2="17.635" width="0" layer="19" extent="1-1"/>
-<wire x1="38.989" y1="30.48" x2="45.339" y2="27.432" width="0" layer="19" extent="1-1"/>
-<wire x1="34.2138" y1="36.1442" x2="34.844" y2="29.383" width="0" layer="19" extent="1-1"/>
-<wire x1="31.9912" y1="37.0438" x2="34.2138" y2="36.1442" width="0" layer="19" extent="1-1"/>
-<wire x1="35.922" y1="41.1988" x2="34.412" y2="38.1382" width="0" layer="19" extent="1-1"/>
-<wire x1="16.0322" y1="38.0574" x2="21.446" y2="37.218" width="0" layer="19" extent="1-1"/>
-<wire x1="15.622" y1="16.5" x2="8.1026" y2="14.605" width="0" layer="19" extent="1-1"/>
-<wire x1="15.778" y1="21.042" x2="15.622" y2="16.5" width="0" layer="19" extent="1-1"/>
-<wire x1="29.443" y1="20.006" x2="22.943" y2="20.006" width="0" layer="19" extent="1-1"/>
-<wire x1="78.9126" y1="33.0846" x2="7.112" y2="1.397" width="0" layer="19" extent="1-1"/>
-<wire x1="79.5626" y1="31.6346" x2="78.9126" y2="33.0846" width="0" layer="19" extent="1-1"/>
-<wire x1="87.7688" y1="32.258" x2="79.5626" y2="31.6346" width="0" layer="19" extent="1-1"/>
-<wire x1="90.4452" y1="32.258" x2="87.7688" y2="32.258" width="0" layer="19" extent="1-1"/>
-<wire x1="93.0614" y1="32.258" x2="90.4452" y2="32.258" width="0" layer="19" extent="1-1"/>
+<wire x1="90.4452" y1="32.258" x2="93.0614" y2="32.258" width="0" layer="19" extent="1-1"/>
+<wire x1="87.7688" y1="32.258" x2="90.4452" y2="32.258" width="0" layer="19" extent="1-1"/>
+<wire x1="79.5626" y1="31.6346" x2="87.7688" y2="32.258" width="0" layer="19" extent="1-1"/>
+<wire x1="78.9126" y1="33.0846" x2="79.5626" y2="31.6346" width="0" layer="19" extent="1-1"/>
 <wire x1="81.1862" y1="13.671" x2="79.5626" y2="31.6346" width="0" layer="19" extent="1-1"/>
 <wire x1="79.1252" y1="11.2522" x2="81.1862" y2="13.671" width="0" layer="19" extent="1-1"/>
 <wire x1="81.495" y1="-6.6802" x2="79.1252" y2="11.2522" width="0" layer="19" extent="1-1"/>
@@ -2547,6 +2308,57 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="76.2728" y1="-9.8058" x2="76.2728" y2="-9.3058" width="0" layer="19" extent="1-1"/>
 <wire x1="87.4226" y1="-6.6802" x2="81.495" y2="-6.6802" width="0" layer="19" extent="1-1"/>
 <wire x1="90.0388" y1="-6.6802" x2="87.4226" y2="-6.6802" width="0" layer="19" extent="1-1"/>
+<wire x1="49.403" y1="1.397" x2="76.2728" y2="-8.3058" width="0" layer="19" extent="1-1"/>
+<wire x1="49.403" y1="5.08" x2="49.403" y2="1.397" width="0" layer="19" extent="1-1"/>
+<wire x1="44.196" y1="1.397" x2="49.403" y2="1.397" width="0" layer="19" extent="1-1"/>
+<wire x1="38.862" y1="1.397" x2="44.196" y2="1.397" width="0" layer="19" extent="1-1"/>
+<wire x1="38.332" y1="3.988" x2="38.862" y2="1.397" width="0" layer="19" extent="1-1"/>
+<wire x1="33.909" y1="1.397" x2="33" y2="2.3" width="0" layer="19" extent="1-1"/>
+<wire x1="41.275" y1="9.652" x2="37.887" y2="9.247" width="0" layer="19" extent="1-1"/>
+<wire x1="44.704" y1="12.573" x2="42.304" y2="9.632" width="0" layer="19" extent="1-1"/>
+<wire x1="28.448" y1="1.397" x2="33" y2="2.3" width="0" layer="19" extent="1-1"/>
+<wire x1="23.368" y1="1.397" x2="28.448" y2="1.397" width="0" layer="19" extent="1-1"/>
+<wire x1="17.907" y1="1.397" x2="23.368" y2="1.397" width="0" layer="19" extent="1-1"/>
+<wire x1="15.748" y1="2.032" x2="17.907" y2="1.397" width="0" layer="19" extent="1-1"/>
+<wire x1="12.7" y1="1.397" x2="14.478" y2="3.556" width="0" layer="19" extent="1-1"/>
+<wire x1="7.112" y1="1.397" x2="12.7" y2="1.397" width="0" layer="19" extent="1-1"/>
+<wire x1="1.4" y1="1.4" x2="7.112" y2="1.397" width="0" layer="19" extent="1-1"/>
+<wire x1="1.4" y1="7.089" x2="1.4" y2="1.4" width="0" layer="19" extent="1-1"/>
+<wire x1="1.4" y1="12.189" x2="1.4" y2="7.089" width="0" layer="19" extent="1-1"/>
+<wire x1="1.4" y1="17.635" x2="1.4" y2="12.189" width="0" layer="19" extent="1-1"/>
+<wire x1="1.397" y1="23.495" x2="1.4" y2="17.635" width="0" layer="19" extent="1-1"/>
+<wire x1="2.211" y1="26.018" x2="1.397" y2="23.495" width="0" layer="19" extent="1-1"/>
+<wire x1="1.397" y1="28.956" x2="3.81" y2="27.432" width="0" layer="19" extent="1-1"/>
+<wire x1="1.397" y1="33.782" x2="1.397" y2="28.956" width="0" layer="19" extent="1-1"/>
+<wire x1="1.397" y1="38.862" x2="1.397" y2="33.782" width="0" layer="19" extent="1-1"/>
+<wire x1="1.397" y1="44.196" x2="1.397" y2="38.862" width="0" layer="19" extent="1-1"/>
+<wire x1="1.397" y1="49.403" x2="1.397" y2="44.196" width="0" layer="19" extent="1-1"/>
+<wire x1="5.588" y1="49.403" x2="1.397" y2="49.403" width="0" layer="19" extent="1-1"/>
+<wire x1="10.414" y1="49.403" x2="5.588" y2="49.403" width="0" layer="19" extent="1-1"/>
+<wire x1="14.986" y1="49.403" x2="10.414" y2="49.403" width="0" layer="19" extent="1-1"/>
+<wire x1="20.701" y1="49.403" x2="14.986" y2="49.403" width="0" layer="19" extent="1-1"/>
+<wire x1="22.733" y1="47.117" x2="20.701" y2="49.403" width="0" layer="19" extent="1-1"/>
+<wire x1="26.035" y1="49.403" x2="24.638" y2="47.117" width="0" layer="19" extent="1-1"/>
+<wire x1="30.861" y1="49.403" x2="26.035" y2="49.403" width="0" layer="19" extent="1-1"/>
+<wire x1="36.068" y1="49.403" x2="30.861" y2="49.403" width="0" layer="19" extent="1-1"/>
+<wire x1="40.894" y1="49.403" x2="36.068" y2="49.403" width="0" layer="19" extent="1-1"/>
+<wire x1="45.212" y1="49.403" x2="40.894" y2="49.403" width="0" layer="19" extent="1-1"/>
+<wire x1="49.403" y1="49.403" x2="45.212" y2="49.403" width="0" layer="19" extent="1-1"/>
+<wire x1="49.403" y1="45.212" x2="49.403" y2="49.403" width="0" layer="19" extent="1-1"/>
+<wire x1="49.403" y1="40.64" x2="49.403" y2="45.212" width="0" layer="19" extent="1-1"/>
+<wire x1="49.403" y1="36.195" x2="49.403" y2="40.64" width="0" layer="19" extent="1-1"/>
+<wire x1="46.482" y1="34.798" x2="49.403" y2="36.195" width="0" layer="19" extent="1-1"/>
+<wire x1="49.403" y1="27.305" x2="46.609" y2="25.527" width="0" layer="19" extent="1-1"/>
+<wire x1="49.403" y1="31.623" x2="46.482" y2="34.798" width="0" layer="19" extent="1-1"/>
+<wire x1="49.403" y1="22.225" x2="46.609" y2="25.527" width="0" layer="19" extent="1-1"/>
+<wire x1="49.403" y1="17.653" x2="49.403" y2="22.225" width="0" layer="19" extent="1-1"/>
+<wire x1="38.989" y1="30.48" x2="45.339" y2="27.432" width="0" layer="19" extent="1-1"/>
+<wire x1="34.2138" y1="36.1442" x2="34.844" y2="29.383" width="0" layer="19" extent="1-1"/>
+<wire x1="31.9912" y1="37.0438" x2="34.2138" y2="36.1442" width="0" layer="19" extent="1-1"/>
+<wire x1="35.922" y1="41.1988" x2="34.412" y2="38.1382" width="0" layer="19" extent="1-1"/>
+<wire x1="20.455" y1="23.994" x2="22.943" y2="31.482" width="0" layer="19" extent="1-1"/>
+<wire x1="15.622" y1="16.5" x2="15.778" y2="21.042" width="0" layer="19" extent="1-1"/>
+<wire x1="29.443" y1="20.006" x2="22.943" y2="20.006" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="BOOT0">
 <contactref element="IC1" pad="60"/>
@@ -2815,40 +2627,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="25.5524" y1="41.235" x2="24.9936" y2="40.6762" width="0.2032" layer="1"/>
 <wire x1="25.5524" y1="43.8404" x2="25.5524" y2="41.235" width="0.2032" layer="1"/>
 </signal>
-<signal name="PH1-OSC-OUT">
-<contactref element="R4" pad="1"/>
-<wire x1="8.3" y1="13.242" x2="9.316" y2="14.258" width="0.2032" layer="1"/>
-<wire x1="9.316" y1="21.0641" x2="9.316" y2="14.258" width="0.2032" layer="1"/>
-<wire x1="9.316" y1="21.0641" x2="15.2459" y2="26.994" width="0.2032" layer="1"/>
-</signal>
-<signal name="PH0-OSC-IN">
-<contactref element="Y1" pad="2"/>
-<wire x1="20.447" y1="27.502" x2="14.489" y2="27.502" width="0.2032" layer="1"/>
-<contactref element="C35" pad="1"/>
-<wire x1="4.558" y1="15.351" x2="5.6436" y2="16.4366" width="0.2032" layer="1"/>
-<wire x1="5.6436" y1="16.4366" x2="7.874" y2="16.4366" width="0.2032" layer="1"/>
-<wire x1="14.489" y1="27.502" x2="8.1536" y2="21.1666" width="0.2032" layer="1"/>
-<wire x1="8.1536" y1="16.7162" x2="7.874" y2="16.4366" width="0.2032" layer="1"/>
-<wire x1="8.1536" y1="21.1666" x2="8.1536" y2="16.7162" width="0.2032" layer="1"/>
-</signal>
-<signal name="PC15-OSC32-OUT">
-<contactref element="C2" pad="1"/>
-<wire x1="17.73" y1="28.752" x2="17.73" y2="30.617" width="0.2032" layer="1"/>
-<wire x1="18.488" y1="27.994" x2="17.73" y2="28.752" width="0.2032" layer="1"/>
-<contactref element="J1" pad="2"/>
-<wire x1="17.73" y1="32.7344" x2="17.3736" y2="33.0908" width="0.2032" layer="1"/>
-<wire x1="17.73" y1="30.617" x2="17.73" y2="32.7344" width="0.2032" layer="1"/>
-</signal>
-<signal name="PC14-OSC32-IN">
-<contactref element="C37" pad="1"/>
-<wire x1="17.3736" y1="37.7588" x2="17.6722" y2="38.0574" width="0.2032" layer="1"/>
-<wire x1="20.424" y1="28.463" x2="19.6630875" y2="28.463" width="0.2032" layer="1"/>
-<wire x1="19.6630875" y1="28.463" x2="18.6182" y2="29.5078875" width="0.2032" layer="1"/>
-<contactref element="J1" pad="1"/>
-<wire x1="17.3736" y1="35.5908" x2="17.3736" y2="37.7588" width="0.2032" layer="1"/>
-<wire x1="18.6182" y1="37.1114" x2="17.6722" y2="38.0574" width="0.2032" layer="1"/>
-<wire x1="18.6182" y1="29.5078875" x2="18.6182" y2="37.1114" width="0.2032" layer="1"/>
-</signal>
 <signal name="5V_IN">
 <contactref element="J2" pad="1"/>
 <wire x1="46.001" y1="9.81" x2="45.7082" y2="9.5172" width="0.3048" layer="1"/>
@@ -2924,16 +2702,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="36.35" y1="9.7" x2="36.797" y2="10.147" width="0.2032" layer="1"/>
 <wire x1="36.797" y1="10.147" x2="37.887" y2="10.147" width="0.2032" layer="1"/>
 </signal>
-<signal name="N$3">
-<contactref element="Y1" pad="1"/>
-<contactref element="R4" pad="2"/>
-<wire x1="4.558" y1="5.851" x2="4.558" y2="5.9272" width="0.2032" layer="1"/>
-<contactref element="C3" pad="1"/>
-<wire x1="4.558" y1="5.9272" x2="7.2442" y2="8.6134" width="0.2032" layer="1"/>
-<wire x1="8.2804" y1="8.6134" x2="7.2442" y2="8.6134" width="0.2032" layer="1"/>
-<wire x1="8.3" y1="8.633" x2="8.2804" y2="8.6134" width="0.2032" layer="1"/>
-<wire x1="8.3" y1="11.342" x2="8.3" y2="8.633" width="0.2032" layer="1"/>
-</signal>
 <signal name="SWO">
 <contactref element="IC1" pad="55"/>
 <contactref element="JP3" pad="4"/>
@@ -2978,14 +2746,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </signal>
 <signal name="ADC2_IN8">
 <contactref element="JP2" pad="4"/>
-<wire x1="6.35" y1="24.892" x2="6.35" y2="24.191" width="0.2032" layer="1"/>
 </signal>
 <signal name="ADC1_IN9">
 <contactref element="JP2" pad="2"/>
-<wire x1="7.62" y1="25.36364375" x2="7.62" y2="24.26795625" width="0.2032" layer="1"/>
-<wire x1="6.35" y1="27.432" x2="6.35" y2="26.63364375" width="0.2032" layer="1"/>
-<wire x1="6.35" y1="26.63364375" x2="7.62" y2="25.36364375" width="0.2032" layer="1"/>
-<wire x1="7.62" y1="24.26795625" x2="6.35" y2="22.99795625" width="0.2032" layer="1"/>
 </signal>
 <signal name="USART3_RX">
 <contactref element="IC1" pad="52"/>
@@ -3067,102 +2830,44 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </signal>
 <signal name="TIM16_CH1">
 <contactref element="JP5" pad="4"/>
-<wire x1="24.943" y1="21.3501" x2="24.765" y2="21.5281" width="0.2032" layer="1"/>
-<via x="24.765" y="21.5281" extent="1-16" drill="0.35"/>
-<wire x1="24.765" y1="21.5281" x2="23.0521" y2="21.5281" width="0.2032" layer="16"/>
-<wire x1="23.0521" y1="21.5281" x2="22.6314" y2="21.1074" width="0.2032" layer="16"/>
-<wire x1="17.6428" y1="24.765" x2="15.4838" y2="24.765" width="0.2032" layer="16"/>
-<wire x1="15.4838" y1="24.765" x2="13.1978" y2="27.051" width="0.2032" layer="16"/>
-<wire x1="13.081" y1="27.051" x2="13.1978" y2="27.051" width="0.2032" layer="16"/>
-<via x="13.081" y="27.051" extent="1-16" drill="0.35"/>
-<wire x1="13.081" y1="27.051" x2="7.366" y2="32.766" width="0.2032" layer="1"/>
-<wire x1="7.366" y1="32.766" x2="6.35" y2="32.766" width="0.2032" layer="1"/>
-<wire x1="22.6314" y1="21.1074" x2="21.3004" y2="21.1074" width="0.2032" layer="16"/>
-<wire x1="21.3004" y1="21.1074" x2="17.6428" y2="24.765" width="0.2032" layer="16"/>
 </signal>
 <signal name="TIM2_CH4">
 <contactref element="JP5" pad="5"/>
-<wire x1="20.701" y1="19.6342" x2="17.2974" y2="23.0378" width="0.2032" layer="16"/>
-<wire x1="17.2974" y1="23.0378" x2="12.6492" y2="23.0378" width="0.2032" layer="16"/>
-<via x="10.7724" y="24.892" extent="1-16" drill="0.35"/>
-<wire x1="12.6492" y1="23.0378" x2="10.7837" y2="24.9033" width="0.2032" layer="16"/>
-<wire x1="10.7724" y1="24.892" x2="10.7837" y2="24.9033" width="0.2032" layer="16"/>
-<wire x1="10.7724" y1="24.892" x2="6.7084" y2="28.956" width="0.2032" layer="1"/>
-<wire x1="3.81" y1="30.226" x2="5.08" y2="28.956" width="0.2032" layer="1"/>
-<wire x1="6.7084" y1="28.956" x2="5.08" y2="28.956" width="0.2032" layer="1"/>
-<via x="25.9842" y="17.018" extent="1-16" drill="0.35"/>
-<wire x1="28.974" y1="19.975" x2="28.974" y2="17.9301" width="0.2032" layer="1"/>
-<wire x1="28.0619" y1="17.018" x2="25.9842" y2="17.018" width="0.2032" layer="1"/>
-<wire x1="28.974" y1="17.9301" x2="28.0619" y2="17.018" width="0.2032" layer="1"/>
-<wire x1="25.9842" y1="17.018" x2="24.8892" y2="18.113" width="0.2032" layer="16"/>
-<wire x1="24.8892" y1="18.113" x2="24.8892" y2="18.67686875" width="0.2032" layer="16"/>
-<wire x1="24.8892" y1="18.67686875" x2="23.93186875" y2="19.6342" width="0.2032" layer="16"/>
-<wire x1="23.93186875" y1="19.6342" x2="20.701" y2="19.6342" width="0.2032" layer="16"/>
 </signal>
 <signal name="TIM2_CH3">
 <contactref element="JP5" pad="6"/>
-<wire x1="20.9042" y1="20.3708" x2="17.272" y2="24.003" width="0.2032" layer="16"/>
-<wire x1="17.272" y1="24.003" x2="13.843" y2="24.003" width="0.2032" layer="16"/>
-<via x="8.763" y="29.718" extent="1-16" drill="0.35"/>
-<wire x1="8.763" y1="29.718" x2="8.763" y2="29.083" width="0.2032" layer="16"/>
-<wire x1="13.843" y1="24.003" x2="8.763" y2="29.083" width="0.2032" layer="16"/>
-<wire x1="8.763" y1="29.718" x2="6.858" y2="29.718" width="0.2032" layer="1"/>
-<wire x1="6.858" y1="29.718" x2="6.35" y2="30.226" width="0.2032" layer="1"/>
-<wire x1="28.443" y1="19.172" x2="27.3739" y2="18.1029" width="0.2032" layer="1"/>
-<wire x1="27.3739" y1="18.1029" x2="26.416" y2="18.1029" width="0.2032" layer="1"/>
-<via x="26.416" y="18.1029" extent="1-16" drill="0.35"/>
-<wire x1="20.9042" y1="20.3708" x2="24.7831" y2="20.3708" width="0.2032" layer="16"/>
-<wire x1="26.416" y1="18.1029" x2="26.416" y2="18.7379" width="0.2032" layer="16"/>
-<wire x1="26.416" y1="18.7379" x2="24.7831" y2="20.3708" width="0.2032" layer="16"/>
 </signal>
 <signal name="I2C2_SCL">
 <contactref element="JP1" pad="10"/>
-<wire x1="34.0464" y1="22.494" x2="34.3154" y2="22.225" width="0.2032" layer="1"/>
-<via x="34.3154" y="22.225" extent="1-16" drill="0.35"/>
-<wire x1="34.3154" y1="22.225" x2="34.3154" y2="16.7894" width="0.2032" layer="16"/>
-<wire x1="30.226" y1="12.7" x2="28.956" y2="12.7" width="0.2032" layer="16"/>
-<wire x1="28.956" y1="12.7" x2="25.8064" y2="9.5504" width="0.2032" layer="16"/>
 <wire x1="25.8064" y1="8.9408" x2="25.8064" y2="9.5504" width="0.2032" layer="16"/>
 <via x="25.8064" y="8.9408" extent="1-16" drill="0.35"/>
 <wire x1="25.8064" y1="8.9408" x2="25.8064" y2="7.2644" width="0.2032" layer="1"/>
-<wire x1="34.3154" y1="16.7894" x2="30.226" y2="12.7" width="0.2032" layer="16"/>
 <wire x1="25.8064" y1="7.2644" x2="24.638" y2="6.096" width="0.2032" layer="1"/>
 <contactref element="BAROMETER" pad="4"/>
 <contactref element="R2" pad="1"/>
 <contactref element="IC1" pad="29"/>
-<wire x1="77.6126" y1="31.6346" x2="72.5212" y2="28.702" width="0" layer="19" extent="1-1"/>
-<wire x1="24.638" y1="6.096" x2="77.6126" y2="31.6346" width="0" layer="19" extent="1-1"/>
-<wire x1="28.443" y1="20.006" x2="34.0464" y2="22.494" width="0" layer="19" extent="1-1"/>
+<wire x1="72.5212" y1="28.702" x2="77.6126" y2="31.6346" width="0" layer="19" extent="1-1"/>
+<wire x1="28.443" y1="20.006" x2="72.5212" y2="28.702" width="0" layer="19" extent="1-1"/>
+<wire x1="25.8064" y1="9.5504" x2="28.443" y2="20.006" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="I2C2_SDA">
 <contactref element="JP1" pad="12"/>
-<wire x1="36.195" y1="22.987" x2="36.957" y2="22.225" width="0.2032" layer="1"/>
-<wire x1="31.938" y1="22.987" x2="36.195" y2="22.987" width="0.2032" layer="1"/>
-<via x="36.957" y="22.225" extent="1-16" drill="0.35"/>
-<wire x1="36.957" y1="22.225" x2="36.957" y2="17.78" width="0.2032" layer="16"/>
 <wire x1="29.337" y1="10.16" x2="28.575" y2="10.16" width="0.2032" layer="16"/>
 <via x="28.575" y="10.16" extent="1-16" drill="0.35"/>
 <wire x1="28.575" y1="10.16" x2="28.575" y2="8.382" width="0.2032" layer="1"/>
-<wire x1="36.957" y1="17.78" x2="29.337" y2="10.16" width="0.2032" layer="16"/>
 <wire x1="27.178" y1="6.985" x2="27.178" y2="6.096" width="0.2032" layer="1"/>
 <wire x1="28.575" y1="8.382" x2="27.178" y2="6.985" width="0.2032" layer="1"/>
 <contactref element="BAROMETER" pad="3"/>
 <contactref element="R3" pad="1"/>
 <contactref element="IC1" pad="30"/>
-<wire x1="78.2626" y1="31.6346" x2="74.985" y2="28.702" width="0" layer="19" extent="1-1"/>
-<wire x1="27.178" y1="6.096" x2="78.2626" y2="31.6346" width="0" layer="19" extent="1-1"/>
-<wire x1="28.943" y1="20.006" x2="31.938" y2="22.987" width="0" layer="19" extent="1-1"/>
+<wire x1="74.985" y1="28.702" x2="78.2626" y2="31.6346" width="0" layer="19" extent="1-1"/>
+<wire x1="28.943" y1="20.006" x2="74.985" y2="28.702" width="0" layer="19" extent="1-1"/>
+<wire x1="29.337" y1="10.16" x2="28.943" y2="20.006" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="TIM15_CH2">
 <contactref element="JP4" pad="5"/>
 <wire x1="43.942" y1="34.798" x2="45.0596" y2="33.6804" width="0.2032" layer="1"/>
-<via x="34.084" y="23.749" extent="1-16" drill="0.35"/>
-<wire x1="32.7737125" y1="23.4884" x2="31.9366" y2="23.4884" width="0.2032" layer="1"/>
-<wire x1="33.0343125" y1="23.749" x2="34.084" y2="23.749" width="0.2032" layer="1"/>
-<wire x1="32.7737125" y1="23.4884" x2="33.0343125" y2="23.749" width="0.2032" layer="1"/>
 <via x="45.0596" y="33.6804" extent="1-16" drill="0.35"/>
-<wire x1="34.084" y1="23.749" x2="34.1094" y2="23.7744" width="0.2032" layer="16"/>
-<wire x1="34.1094" y1="23.7744" x2="39.5986" y2="23.7744" width="0.2032" layer="16"/>
 <wire x1="39.5986" y1="23.7744" x2="45.0596" y2="29.2354" width="0.2032" layer="16"/>
 <wire x1="45.0596" y1="29.2354" x2="45.0596" y2="33.6804" width="0.2032" layer="16"/>
 </signal>
@@ -3199,46 +2904,16 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </signal>
 <signal name="TIM15_CH1">
 <contactref element="JP5" pad="3"/>
-<wire x1="21.7956" y1="21.994" x2="21.971" y2="21.8186" width="0.2032" layer="1"/>
-<via x="21.971" y="21.8186" extent="1-16" drill="0.35"/>
-<wire x1="21.971" y1="21.8186" x2="17.7546" y2="26.035" width="0.2032" layer="16"/>
-<wire x1="17.7546" y1="26.035" x2="16.51" y2="26.035" width="0.2032" layer="16"/>
-<via x="5.334" y="33.909" extent="1-16" drill="0.35"/>
-<wire x1="16.51" y1="26.035" x2="8.5598" y2="33.9852" width="0.2032" layer="16"/>
-<wire x1="8.5598" y1="33.9852" x2="5.4102" y2="33.9852" width="0.2032" layer="16"/>
-<wire x1="5.4102" y1="33.9852" x2="5.334" y2="33.909" width="0.2032" layer="16"/>
-<wire x1="5.334" y1="33.909" x2="4.953" y2="33.909" width="0.2032" layer="1"/>
-<wire x1="3.81" y1="32.766" x2="4.953" y2="33.909" width="0.2032" layer="1"/>
 </signal>
 <signal name="TIM2_CH2">
 <contactref element="JP5" pad="2"/>
-<wire x1="21.986" y1="22.494" x2="22.80411875" y2="23.31211875" width="0.2032" layer="1"/>
-<via x="22.80411875" y="23.31211875" extent="1-16" drill="0.35"/>
-<wire x1="22.80411875" y1="23.31211875" x2="21.51378125" y2="23.31211875" width="0.2032" layer="16"/>
-<via x="16.51" y="28.194" extent="1-16" drill="0.35"/>
-<wire x1="6.35" y1="35.306" x2="9.398" y2="35.306" width="0.2032" layer="1"/>
-<wire x1="16.51" y1="28.194" x2="9.398" y2="35.306" width="0.2032" layer="1"/>
-<wire x1="21.51378125" y1="23.31211875" x2="16.6319" y2="28.194" width="0.2032" layer="16"/>
-<wire x1="16.6319" y1="28.194" x2="16.51" y2="28.194" width="0.2032" layer="16"/>
 </signal>
 <signal name="TIM2_CH1">
 <contactref element="JP5" pad="1"/>
-<via x="22.098" y="24.765" extent="1-16" drill="0.35"/>
-<wire x1="22.098" y1="23.8140875" x2="22.098" y2="24.765" width="0.2032" layer="1"/>
-<wire x1="20.5034" y1="23.0424" x2="21.3263125" y2="23.0424" width="0.2032" layer="1"/>
-<wire x1="21.3263125" y1="23.0424" x2="22.098" y2="23.8140875" width="0.2032" layer="1"/>
-<via x="4.953" y="36.322" extent="1-16" drill="0.35"/>
-<wire x1="10.5308" y1="36.576" x2="5.207" y2="36.576" width="0.2032" layer="16"/>
-<wire x1="5.207" y1="36.576" x2="4.953" y2="36.322" width="0.2032" layer="16"/>
-<wire x1="4.953" y1="36.322" x2="3.937" y2="35.306" width="0.2032" layer="1"/>
-<wire x1="3.937" y1="35.306" x2="3.81" y2="35.306" width="0.2032" layer="1"/>
-<wire x1="22.098" y1="24.765" x2="22.098" y2="25.0088" width="0.2032" layer="16"/>
-<wire x1="22.098" y1="25.0088" x2="10.5308" y2="36.576" width="0.2032" layer="16"/>
 </signal>
 <signal name="PC5">
 <contactref element="JP1" pad="7"/>
 <via x="26.543" y="13.1318" extent="1-16" drill="0.35"/>
-<wire x1="26.443" y1="19.1322875" x2="25.273" y2="17.9622875" width="0.2032" layer="1"/>
 <wire x1="26.543" y1="13.1318" x2="24.13" y2="10.7188" width="0.2032" layer="16"/>
 <wire x1="24.13" y1="10.7188" x2="24.13" y2="8.255" width="0.2032" layer="16"/>
 <via x="24.13" y="8.255" extent="1-16" drill="0.35"/>
@@ -3246,7 +2921,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="24.13" y1="7.53284375" x2="23.3934" y2="6.79624375" width="0.2032" layer="1"/>
 <wire x1="23.3934" y1="4.8514" x2="22.098" y2="3.556" width="0.2032" layer="1"/>
 <wire x1="23.3934" y1="6.79624375" x2="23.3934" y2="4.8514" width="0.2032" layer="1"/>
-<wire x1="25.273" y1="17.9622875" x2="25.273" y2="14.4018" width="0.2032" layer="1"/>
 <wire x1="25.273" y1="14.4018" x2="26.543" y2="13.1318" width="0.2032" layer="1"/>
 </signal>
 <signal name="VDD">

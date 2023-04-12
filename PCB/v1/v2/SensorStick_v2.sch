@@ -244,26 +244,6 @@
 <wire x1="-0.8" y1="-0.4" x2="-0.8" y2="0.4" width="0.1" layer="51"/>
 <wire x1="0" y1="0.3" x2="0" y2="-0.3" width="0.2" layer="21"/>
 </package>
-<package name="XTAL_ABLS-8.000MHZ-B2-T">
-<wire x1="-5.7" y1="-2.35" x2="-5.7" y2="2.35" width="0.127" layer="51"/>
-<wire x1="-5.7" y1="2.35" x2="5.7" y2="2.35" width="0.127" layer="51"/>
-<wire x1="5.7" y1="2.35" x2="5.7" y2="-2.35" width="0.127" layer="51"/>
-<wire x1="5.7" y1="-2.35" x2="-5.7" y2="-2.35" width="0.127" layer="51"/>
-<wire x1="-5.7" y1="1.42" x2="-5.7" y2="2.35" width="0.127" layer="21"/>
-<wire x1="-5.7" y1="2.35" x2="5.7" y2="2.35" width="0.127" layer="21"/>
-<wire x1="5.7" y1="2.35" x2="5.7" y2="1.42" width="0.127" layer="21"/>
-<wire x1="-5.7" y1="-1.42" x2="-5.7" y2="-2.35" width="0.127" layer="21"/>
-<wire x1="-5.7" y1="-2.35" x2="5.7" y2="-2.35" width="0.127" layer="21"/>
-<wire x1="5.7" y1="-2.35" x2="5.7" y2="-1.42" width="0.127" layer="21"/>
-<wire x1="-7.8" y1="-2.6" x2="-7.8" y2="2.6" width="0.05" layer="39"/>
-<wire x1="-7.8" y1="2.6" x2="7.8" y2="2.6" width="0.05" layer="39"/>
-<wire x1="7.8" y1="2.6" x2="7.8" y2="-2.6" width="0.05" layer="39"/>
-<wire x1="7.8" y1="-2.6" x2="-7.8" y2="-2.6" width="0.05" layer="39"/>
-<text x="-7.800590625" y="2.7002" size="1.2701" layer="25">&gt;NAME</text>
-<text x="-7.901140625" y="-3.900559375" size="1.27018125" layer="27">&gt;VALUE</text>
-<smd name="1" x="-4.75" y="0" dx="5.6" dy="2.1" layer="1"/>
-<smd name="2" x="4.75" y="0" dx="5.6" dy="2.1" layer="1"/>
-</package>
 <package name="AMPHENOL_10118192-0001LF">
 <wire x1="-3.75" y1="0.225" x2="3.75" y2="0.225" width="0.127" layer="51"/>
 <wire x1="3.75" y1="0.225" x2="3.75" y2="-4.125" width="0.127" layer="51"/>
@@ -351,20 +331,6 @@
 <text x="2.54" y="-6.35" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="1" x="0" y="7.62" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="2" x="0" y="-7.62" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
-</symbol>
-<symbol name="OSCILLATOR">
-<wire x1="1.016" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-1.016" y2="0" width="0.1524" layer="94"/>
-<wire x1="-0.381" y1="1.524" x2="-0.381" y2="-1.524" width="0.254" layer="94"/>
-<wire x1="-0.381" y1="-1.524" x2="0.381" y2="-1.524" width="0.254" layer="94"/>
-<wire x1="0.381" y1="-1.524" x2="0.381" y2="1.524" width="0.254" layer="94"/>
-<wire x1="0.381" y1="1.524" x2="-0.381" y2="1.524" width="0.254" layer="94"/>
-<wire x1="1.016" y1="1.778" x2="1.016" y2="-1.778" width="0.254" layer="94"/>
-<wire x1="-1.016" y1="1.778" x2="-1.016" y2="-1.778" width="0.254" layer="94"/>
-<text x="-5.08113125" y="2.286509375" size="1.7784" layer="95">&gt;NAME</text>
-<text x="-5.58906875" y="-3.81073125" size="1.778340625" layer="96">&gt;VALUE</text>
-<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
-<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas"/>
 </symbol>
 <symbol name="10118192-0001LF">
 <wire x1="-5.08" y1="10.16" x2="5.08" y2="10.16" width="0.1524" layer="94"/>
@@ -455,30 +421,6 @@ Source: &lt;a href="https://www.tai-tech.com.tw/_upload/files/FCM1608-Series.pdf
 <attribute name="MOUSER_PRICE-STOCK" value="" constant="no"/>
 <attribute name="RS_PART_NUMBER" value="" constant="no"/>
 <attribute name="RS_PRICE-STOCK" value="" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="ABLS-8.000MHZ-B2-T" prefix="Y">
-<description>Crystal 8MHz Â±20ppm (Tol) Â±50ppm (Stability) 18pF FUND 80Ohm 2-Pin HC-49/US SMD T/R</description>
-<gates>
-<gate name="G$1" symbol="OSCILLATOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="XTAL_ABLS-8.000MHZ-B2-T">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="AVAILABILITY" value="Unavailable"/>
-<attribute name="DESCRIPTION" value=" 8MHz ±20ppm Crystal 18pF 80 Ohms HC-49/US "/>
-<attribute name="MF" value="Abracon LLC"/>
-<attribute name="MP" value="ABLS-8.000MHZ-B2"/>
-<attribute name="PACKAGE" value="HC-49/US Abracon LLC"/>
-<attribute name="PRICE" value="None"/>
 </technology>
 </technologies>
 </device>
@@ -979,68 +921,6 @@ Source: &lt;a href="https://www.murata.com/en-eu/products/productdetail?partno=G
 </deviceset>
 </devicesets>
 </library>
-<library name="GQM2195C2E4R7BB12D(4_7p)">
-<description>&lt;Capacitor GQM21 L=2.0mm W=1.25mm T=0.85mm&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
-<packages>
-<package name="CAPC2012X100N">
-<description>&lt;b&gt;GQM21 L=2.0mm W=1.25mm T=0.85mm&lt;/b&gt;&lt;br&gt;
-</description>
-<smd name="1" x="-0.82" y="0" dx="1.43" dy="0.94" layer="1" rot="R90"/>
-<smd name="2" x="0.82" y="0" dx="1.43" dy="0.94" layer="1" rot="R90"/>
-<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
-<wire x1="-1.44" y1="0.87" x2="1.44" y2="0.87" width="0.05" layer="51"/>
-<wire x1="1.44" y1="0.87" x2="1.44" y2="-0.87" width="0.05" layer="51"/>
-<wire x1="1.44" y1="-0.87" x2="-1.44" y2="-0.87" width="0.05" layer="51"/>
-<wire x1="-1.44" y1="-0.87" x2="-1.44" y2="0.87" width="0.05" layer="51"/>
-<wire x1="-1" y1="0.625" x2="1" y2="0.625" width="0.1" layer="51"/>
-<wire x1="1" y1="0.625" x2="1" y2="-0.625" width="0.1" layer="51"/>
-<wire x1="1" y1="-0.625" x2="-1" y2="-0.625" width="0.1" layer="51"/>
-<wire x1="-1" y1="-0.625" x2="-1" y2="0.625" width="0.1" layer="51"/>
-<wire x1="0" y1="0.525" x2="0" y2="-0.525" width="0.2" layer="21"/>
-</package>
-</packages>
-<symbols>
-<symbol name="GQM2195C2E4R7BB12D">
-<wire x1="5.588" y1="2.54" x2="5.588" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="7.112" y1="2.54" x2="7.112" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="0" x2="5.588" y2="0" width="0.254" layer="94"/>
-<wire x1="7.112" y1="0" x2="7.62" y2="0" width="0.254" layer="94"/>
-<text x="8.89" y="6.35" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="8.89" y="3.81" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
-<pin name="1" x="0" y="0" visible="pad" length="middle"/>
-<pin name="2" x="12.7" y="0" visible="pad" length="middle" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="GQM2195C2E4R7BB12D" prefix="C">
-<description>&lt;b&gt;Capacitor GQM21 L=2.0mm W=1.25mm T=0.85mm&lt;/b&gt;&lt;p&gt;
-Source: &lt;a href="https://psearch.en.murata.com/capacitor/product/GQM2195C2E4R7BB12#.html"&gt; Datasheet &lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="GQM2195C2E4R7BB12D" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="CAPC2012X100N">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DESCRIPTION" value="Capacitor GQM21 L=2.0mm W=1.25mm T=0.85mm" constant="no"/>
-<attribute name="HEIGHT" value="1mm" constant="no"/>
-<attribute name="MANUFACTURER_NAME" value="Murata Electronics" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="GQM2195C2E4R7BB12D" constant="no"/>
-<attribute name="MOUSER_PART_NUMBER" value="81-GQM2195C2E4R7BB2D" constant="no"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Murata-Electronics/GQM2195C2E4R7BB12D?qs=0JbGSuRBwBOIE8NOw5EJ%2FA%3D%3D" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="GRT21BC71H475KE13L(4_7u)">
 <description>&lt;GRT21BC71H475KE13_ (0805, X7S:EIA, 4.7uF, DC50V)&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
@@ -1157,68 +1037,6 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 <attribute name="MANUFACTURER_PART_NUMBER" value="GRM31CR73A103KW03L" constant="no"/>
 <attribute name="MOUSER_PART_NUMBER" value="81-GRM31CR73A103KW3L" constant="no"/>
 <attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Murata-Electronics/GRM31CR73A103KW03L?qs=hNud%2FORuBR1TymPCs4fJcA%3D%3D" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="RC0805FR-10220RL">
-<description>&lt;Thick Film Resistors - SMD 220 OHM 1%&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
-<packages>
-<package name="RESC2012X60N">
-<description>&lt;b&gt;0805-4&lt;/b&gt;&lt;br&gt;
-</description>
-<smd name="1" x="-0.95" y="0" dx="1.4" dy="0.95" layer="1" rot="R90"/>
-<smd name="2" x="0.95" y="0" dx="1.4" dy="0.95" layer="1" rot="R90"/>
-<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
-<wire x1="-1.675" y1="0.95" x2="1.675" y2="0.95" width="0.05" layer="51"/>
-<wire x1="1.675" y1="0.95" x2="1.675" y2="-0.95" width="0.05" layer="51"/>
-<wire x1="1.675" y1="-0.95" x2="-1.675" y2="-0.95" width="0.05" layer="51"/>
-<wire x1="-1.675" y1="-0.95" x2="-1.675" y2="0.95" width="0.05" layer="51"/>
-<wire x1="-1" y1="0.625" x2="1" y2="0.625" width="0.1" layer="51"/>
-<wire x1="1" y1="0.625" x2="1" y2="-0.625" width="0.1" layer="51"/>
-<wire x1="1" y1="-0.625" x2="-1" y2="-0.625" width="0.1" layer="51"/>
-<wire x1="-1" y1="-0.625" x2="-1" y2="0.625" width="0.1" layer="51"/>
-<wire x1="0" y1="0.525" x2="0" y2="-0.525" width="0.2" layer="21"/>
-</package>
-</packages>
-<symbols>
-<symbol name="RC0805FR-10220RL">
-<wire x1="5.08" y1="1.27" x2="12.7" y2="1.27" width="0.254" layer="94"/>
-<wire x1="12.7" y1="-1.27" x2="12.7" y2="1.27" width="0.254" layer="94"/>
-<wire x1="12.7" y1="-1.27" x2="5.08" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="5.08" y1="1.27" x2="5.08" y2="-1.27" width="0.254" layer="94"/>
-<text x="13.97" y="6.35" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="13.97" y="3.81" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
-<pin name="1" x="0" y="0" visible="pad" length="middle"/>
-<pin name="2" x="17.78" y="0" visible="pad" length="middle" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="RC0805FR-10220RL" prefix="R">
-<description>&lt;b&gt;Thick Film Resistors - SMD 220 OHM 1%&lt;/b&gt;&lt;p&gt;
-Source: &lt;a href=""&gt; Datasheet &lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="RC0805FR-10220RL" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="RESC2012X60N">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DESCRIPTION" value="Thick Film Resistors - SMD 220 OHM 1%" constant="no"/>
-<attribute name="HEIGHT" value="0.6mm" constant="no"/>
-<attribute name="MANUFACTURER_NAME" value="KEMET" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="RC0805FR-10220RL" constant="no"/>
-<attribute name="MOUSER_PART_NUMBER" value="603-RC0805FR-10220RL" constant="no"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/YAGEO/RC0805FR-10220RL?qs=m6lXFsvg5e0JpfeoSKi9%252BQ%3D%3D" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -2086,23 +1904,6 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 <description>Generated from &lt;b&gt;ce-capstone-2022.sch&lt;/b&gt;&lt;p&gt;
 by exp-lbrs.ulp</description>
 <packages>
-<package name="DST310S_32.768KHZ_DST310S32768KHZ">
-<description>&lt;b&gt;DST310S 32.768KHz-1&lt;/b&gt;&lt;br&gt;</description>
-<wire x1="-1.6" y1="0.75" x2="1.6" y2="0.75" width="0.2" layer="51"/>
-<wire x1="1.6" y1="0.75" x2="1.6" y2="-0.75" width="0.2" layer="51"/>
-<wire x1="1.6" y1="-0.75" x2="-1.6" y2="-0.75" width="0.2" layer="51"/>
-<wire x1="-1.6" y1="-0.75" x2="-1.6" y2="0.75" width="0.2" layer="51"/>
-<wire x1="-2.75" y1="1.9" x2="2.75" y2="1.9" width="0.1" layer="51"/>
-<wire x1="2.75" y1="1.9" x2="2.75" y2="-1.9" width="0.1" layer="51"/>
-<wire x1="2.75" y1="-1.9" x2="-2.75" y2="-1.9" width="0.1" layer="51"/>
-<wire x1="-2.75" y1="-1.9" x2="-2.75" y2="1.9" width="0.1" layer="51"/>
-<wire x1="-0.4" y1="0.75" x2="0.4" y2="0.75" width="0.1" layer="21"/>
-<wire x1="-0.4" y1="-0.75" x2="0.4" y2="-0.75" width="0.1" layer="21"/>
-<smd name="1" x="-1.25" y="0" dx="1.8" dy="1" layer="1" rot="R90"/>
-<smd name="2" x="1.25" y="0" dx="1.8" dy="1" layer="1" rot="R90"/>
-<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
-</package>
 <package name="SWITCH-TACT_DTSM-6">
 <circle x="0" y="0" radius="1.75" width="0.2032" layer="51"/>
 <circle x="0" y="0" radius="1.75" width="0.2032" layer="21"/>
@@ -2143,16 +1944,6 @@ by exp-lbrs.ulp</description>
 </package>
 </packages>
 <symbols>
-<symbol name="DST310S_32.768KHZ_DST310S_32.768KHZ">
-<wire x1="5.08" y1="2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
-<wire x1="15.24" y1="-5.08" x2="15.24" y2="2.54" width="0.254" layer="94"/>
-<wire x1="15.24" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
-<pin name="1" x="0" y="0" length="middle"/>
-<pin name="2" x="0" y="-2.54" length="middle"/>
-<text x="16.51" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="16.51" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
-</symbol>
 <symbol name="SWITCH-TACT_TS2">
 <circle x="0" y="-2.54" radius="0.127" width="0.4064" layer="94"/>
 <circle x="0" y="2.54" radius="0.127" width="0.4064" layer="94"/>
@@ -2188,33 +1979,6 @@ by exp-lbrs.ulp</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="DST310S_32.768KHZ_DST310S_32.768KHZ" prefix="J">
-<description>&lt;b&gt;SMD Crystal Resonators 32.768KHz +/-20ppm SMD-3215_2P RoHS&lt;/b&gt;&lt;p&gt;
-Source: &lt;a href="https://datasheet.lcsc.com/szlcsc/KDS-Daishinku-KDS-32-768KHz-12-5PF-20ppm_C93232.pdf"&gt; Datasheet &lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="DST310S_32.768KHZ_DST310S_32.768KHZ" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="DST310S_32.768KHZ_DST310S32768KHZ">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="ARROW_PART_NUMBER" value="" constant="no"/>
-<attribute name="ARROW_PRICE-STOCK" value="" constant="no"/>
-<attribute name="DESCRIPTION" value="SMD Crystal Resonators 32.768KHz +/-20ppm SMD-3215_2P RoHS" constant="no"/>
-<attribute name="HEIGHT" value="0.85mm" constant="no"/>
-<attribute name="MANUFACTURER_NAME" value="KDS Daishinku" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="DST310S 32.768KHz" constant="no"/>
-<attribute name="MOUSER_PART_NUMBER" value="" constant="no"/>
-<attribute name="MOUSER_PRICE-STOCK" value="" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="SWITCH-TACT_DTSM-6" prefix="S">
 <gates>
 <gate name="G$1" symbol="SWITCH-TACT_TS2" x="0" y="0"/>
@@ -2255,67 +2019,6 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 <attribute name="MANUFACTURER_PART_NUMBER" value="1N5819HW-7-F" constant="no"/>
 <attribute name="MOUSER_PART_NUMBER" value="621-1N5819HW-F" constant="no"/>
 <attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/1N5819HW-7-F?qs=NQ47qNm99eDyWTEd07miYA%3D%3D" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="CC0402KPX7R7BB104(0402cap_foot)">
-<description>&lt;Multilayer Ceramic Capacitors MLCC - SMD/SMT 16 V 0.1uF X7R 0402 10%&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
-<packages>
-<package name="CAPC1005X55N">
-<description>&lt;b&gt;CC0402--0&lt;/b&gt;&lt;br&gt;
-</description>
-<smd name="1" x="-0.46" y="0" dx="0.62" dy="0.6" layer="1" rot="R90"/>
-<smd name="2" x="0.46" y="0" dx="0.62" dy="0.6" layer="1" rot="R90"/>
-<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
-<wire x1="-0.91" y1="0.46" x2="0.91" y2="0.46" width="0.05" layer="51"/>
-<wire x1="0.91" y1="0.46" x2="0.91" y2="-0.46" width="0.05" layer="51"/>
-<wire x1="0.91" y1="-0.46" x2="-0.91" y2="-0.46" width="0.05" layer="51"/>
-<wire x1="-0.91" y1="-0.46" x2="-0.91" y2="0.46" width="0.05" layer="51"/>
-<wire x1="-0.5" y1="0.25" x2="0.5" y2="0.25" width="0.1" layer="51"/>
-<wire x1="0.5" y1="0.25" x2="0.5" y2="-0.25" width="0.1" layer="51"/>
-<wire x1="0.5" y1="-0.25" x2="-0.5" y2="-0.25" width="0.1" layer="51"/>
-<wire x1="-0.5" y1="-0.25" x2="-0.5" y2="0.25" width="0.1" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="CC0402KPX7R7BB104">
-<wire x1="5.588" y1="2.54" x2="5.588" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="7.112" y1="2.54" x2="7.112" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="0" x2="5.588" y2="0" width="0.254" layer="94"/>
-<wire x1="7.112" y1="0" x2="7.62" y2="0" width="0.254" layer="94"/>
-<text x="8.89" y="6.35" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="8.89" y="3.81" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
-<pin name="1" x="0" y="0" visible="pad" length="middle"/>
-<pin name="2" x="12.7" y="0" visible="pad" length="middle" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="CC0402KPX7R7BB104" prefix="C">
-<description>&lt;b&gt;Multilayer Ceramic Capacitors MLCC - SMD/SMT 16 V 0.1uF X7R 0402 10%&lt;/b&gt;&lt;p&gt;
-Source: &lt;a href="https://www.mouser.ca/datasheet/2/447/UPY_NP0X5R_01005_4V_to_25V_V10-3003057.pdf"&gt; Datasheet &lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="CC0402KPX7R7BB104" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="CAPC1005X55N">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DESCRIPTION" value="Multilayer Ceramic Capacitors MLCC - SMD/SMT 16 V 0.1uF X7R 0402 10%" constant="no"/>
-<attribute name="HEIGHT" value="0.55mm" constant="no"/>
-<attribute name="MANUFACTURER_NAME" value="YAGEO" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="CC0402KPX7R7BB104" constant="no"/>
-<attribute name="MOUSER_PART_NUMBER" value="603-CC402KPX7R7BB104" constant="no"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/YAGEO/CC0402KPX7R7BB104?qs=7s%252B3O6pAiyDFg2%2FesnFI7w%3D%3D" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -4106,9 +3809,6 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="FB1" library="ce-capstone" deviceset="BK1608HS601-T" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="Y1" library="ce-capstone" deviceset="ABLS-8.000MHZ-B2-T" device="" value="8MHz"/>
-<part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J2" library="ce-capstone" deviceset="10118192-0001LF" device=""/>
 <part name="IC1" library="STM32L412RBT6P" deviceset="STM32L412RBT6P" device="" value="STM32L412RBT6"/>
@@ -4125,12 +3825,9 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <part name="C32" library="GRT31C5C2A104JA12L(0_1u)" deviceset="GRT31C5C2A104JA12L" device="" value="100n"/>
 <part name="C33" library="GRT31C5C2A104JA12L(0_1u)" deviceset="GRT31C5C2A104JA12L" device="" value="100n"/>
 <part name="C34" library="GRT31C5C2A104JA12L(0_1u)" deviceset="GRT31C5C2A104JA12L" device="" value="100n"/>
-<part name="C37" library="GQM2195C2E4R7BB12D(4_7p)" deviceset="GQM2195C2E4R7BB12D" device="" value="4.7p"/>
 <part name="C39" library="GRT21BC71H475KE13L(4_7u)" deviceset="GRT21BC71H475KE13L" device="" value="4.7u"/>
 <part name="C40" library="GRM31CR73A103KW03L(0_01u)" deviceset="GRM31CR73A103KW03L" device="" value="10n"/>
-<part name="C2" library="GQM2195C2E4R7BB12D(4_7p)" deviceset="GQM2195C2E4R7BB12D" device="" value="4.7p"/>
 <part name="C4" library="GRM219R61H105KA73D(1u)" deviceset="GRM219R61H105KA73D" device="" value="1u"/>
-<part name="R4" library="RC0805FR-10220RL" deviceset="RC0805FR-10220RL" device="" value="220"/>
 <part name="R6" library="RC0805FR-131KL" deviceset="RC0805FR-131KL" device="" value="1K"/>
 <part name="R7" library="RC0805FR-131KL" deviceset="RC0805FR-131KL" device="" value="1K"/>
 <part name="R1" library="RC0805FR-131KL" deviceset="RC0805FR-131KL" device="" value="1K"/>
@@ -4143,11 +3840,8 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <part name="JP7" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X2" device="" package3d_urn="urn:adsk.eagle:package:22455/2"/>
 <part name="JP3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X4" device="" package3d_urn="urn:adsk.eagle:package:22461/2"/>
 <part name="JP8" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X4" device="" package3d_urn="urn:adsk.eagle:package:22461/2"/>
-<part name="J1" library="ce-capstone-2022" deviceset="DST310S_32.768KHZ_DST310S_32.768KHZ" device="" value="DST310S_32.768KHZ"/>
 <part name="S1" library="ce-capstone-2022" deviceset="SWITCH-TACT_DTSM-6" device=""/>
 <part name="D1" library="ce-capstone-2022" deviceset="1N5819HW-7-F_1N5819HW-7-F" device=""/>
-<part name="C35" library="CC0402KPX7R7BB104(0402cap_foot)" deviceset="CC0402KPX7R7BB104" device="" value="20p"/>
-<part name="C3" library="CC0402KPX7R7BB104(0402cap_foot)" deviceset="CC0402KPX7R7BB104" device="" value="20p"/>
 <part name="U1" library="BMI088" deviceset="BMI088" device=""/>
 <part name="FRAME2" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_C_L" device=""/>
 <part name="BAROMETER" library="DPS310XTSA1" deviceset="DPS310XTSA1" device=""/>
@@ -4208,16 +3902,6 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 </instance>
 <instance part="GND4" gate="1" x="-93.98" y="101.6" smashed="yes">
 <attribute name="VALUE" x="-96.52" y="99.06" size="1.778" layer="96"/>
-</instance>
-<instance part="Y1" gate="G$1" x="7.62" y="208.28" smashed="yes" rot="R90">
-<attribute name="NAME" x="5.333490625" y="203.19886875" size="1.7784" layer="95" rot="R90"/>
-<attribute name="VALUE" x="11.43073125" y="202.69093125" size="1.778340625" layer="96" rot="R90"/>
-</instance>
-<instance part="GND5" gate="1" x="50.8" y="198.12" smashed="yes">
-<attribute name="VALUE" x="48.26" y="195.58" size="1.778" layer="96"/>
-</instance>
-<instance part="GND6" gate="1" x="50.8" y="167.64" smashed="yes">
-<attribute name="VALUE" x="48.26" y="165.1" size="1.778" layer="96"/>
 </instance>
 <instance part="GND7" gate="1" x="299.72" y="144.78" smashed="yes">
 <attribute name="VALUE" x="297.18" y="139.7" size="1.778" layer="96"/>
@@ -4282,10 +3966,6 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <attribute name="NAME" x="-110.49" y="146.05" size="1.778" layer="95" align="center-left"/>
 <attribute name="VALUE" x="-110.49" y="143.51" size="1.778" layer="96" align="center-left"/>
 </instance>
-<instance part="C37" gate="G$1" x="22.86" y="185.42" smashed="yes">
-<attribute name="NAME" x="31.75" y="191.77" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="31.75" y="189.23" size="1.778" layer="96" align="center-left"/>
-</instance>
 <instance part="C39" gate="G$1" x="-124.46" y="223.52" smashed="yes">
 <attribute name="NAME" x="-115.57" y="229.87" size="1.778" layer="95" align="center-left"/>
 <attribute name="VALUE" x="-115.57" y="227.33" size="1.778" layer="96" align="center-left"/>
@@ -4294,17 +3974,9 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <attribute name="NAME" x="-110.49" y="115.57" size="1.778" layer="95" align="center-left"/>
 <attribute name="VALUE" x="-110.49" y="113.03" size="1.778" layer="96" align="center-left"/>
 </instance>
-<instance part="C2" gate="G$1" x="22.86" y="170.18" smashed="yes">
-<attribute name="NAME" x="31.75" y="176.53" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="31.75" y="173.99" size="1.778" layer="96" align="center-left"/>
-</instance>
 <instance part="C4" gate="G$1" x="271.78" y="223.52" smashed="yes" rot="R90">
 <attribute name="NAME" x="265.43" y="232.41" size="1.778" layer="95" rot="R90" align="center-left"/>
 <attribute name="VALUE" x="267.97" y="232.41" size="1.778" layer="96" rot="R90" align="center-left"/>
-</instance>
-<instance part="R4" gate="G$1" x="-30.48" y="200.66" smashed="yes">
-<attribute name="NAME" x="-16.51" y="207.01" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="-16.51" y="204.47" size="1.778" layer="96" align="center-left"/>
 </instance>
 <instance part="R6" gate="G$1" x="299.72" y="218.44" smashed="yes" rot="R90">
 <attribute name="NAME" x="293.37" y="232.41" size="1.778" layer="95" rot="R90" align="center-left"/>
@@ -4353,10 +4025,6 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <attribute name="NAME" x="-133.35" y="61.595" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-133.35" y="45.72" size="1.778" layer="96"/>
 </instance>
-<instance part="J1" gate="G$1" x="-2.54" y="177.8" smashed="yes">
-<attribute name="NAME" x="13.97" y="180.34" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="1.27" y="182.88" size="1.778" layer="96" align="center-left"/>
-</instance>
 <instance part="S1" gate="G$1" x="302.26" y="167.64" smashed="yes" rot="R180">
 <attribute name="NAME" x="308.61" y="170.18" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="306.07" y="164.465" size="1.778" layer="96" rot="R270"/>
@@ -4364,14 +4032,6 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <instance part="D1" gate="G$1" x="185.42" y="236.22" smashed="yes" rot="R180">
 <attribute name="NAME" x="173.99" y="231.14" size="1.778" layer="95" rot="R180" align="center-left"/>
 <attribute name="VALUE" x="189.23" y="241.3" size="1.778" layer="96" rot="R180" align="center-left"/>
-</instance>
-<instance part="C35" gate="G$1" x="25.4" y="215.9" smashed="yes">
-<attribute name="NAME" x="31.75" y="224.79" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="31.75" y="222.25" size="1.778" layer="96" align="center-left"/>
-</instance>
-<instance part="C3" gate="G$1" x="25.4" y="200.66" smashed="yes">
-<attribute name="NAME" x="34.29" y="207.01" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="34.29" y="204.47" size="1.778" layer="96" align="center-left"/>
 </instance>
 <instance part="U1" gate="A" x="-30.48" y="96.52" smashed="yes">
 <attribute name="NAME" x="-9.8044" y="105.6386" size="2.0828" layer="95" ratio="6" rot="SR0"/>
@@ -4579,24 +4239,6 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <pinref part="C39" gate="G$1" pin="2"/>
 <wire x1="-111.76" y1="223.52" x2="-93.98" y2="223.52" width="0.1524" layer="91"/>
 <junction x="-93.98" y="139.7"/>
-</segment>
-<segment>
-<pinref part="GND5" gate="1" pin="GND"/>
-<wire x1="50.8" y1="215.9" x2="50.8" y2="200.66" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="200.66" x2="50.8" y2="200.66" width="0.1524" layer="91"/>
-<junction x="50.8" y="200.66"/>
-<wire x1="38.1" y1="215.9" x2="50.8" y2="215.9" width="0.1524" layer="91"/>
-<pinref part="C35" gate="G$1" pin="2"/>
-<pinref part="C3" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="50.8" y1="185.42" x2="50.8" y2="170.18" width="0.1524" layer="91"/>
-<pinref part="C2" gate="G$1" pin="2"/>
-<wire x1="35.56" y1="170.18" x2="50.8" y2="170.18" width="0.1524" layer="91"/>
-<junction x="50.8" y="170.18"/>
-<pinref part="C37" gate="G$1" pin="2"/>
-<wire x1="35.56" y1="185.42" x2="50.8" y2="185.42" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="276.86" y1="157.48" x2="299.72" y2="157.48" width="0.1524" layer="91"/>
@@ -5021,46 +4663,6 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <label x="-101.6" y="-2.54" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="PH1-OSC-OUT" class="0">
-<segment>
-<wire x1="-30.48" y1="200.66" x2="-50.8" y2="200.66" width="0.1524" layer="91"/>
-<label x="-45.72" y="200.66" size="1.778" layer="95"/>
-<pinref part="R4" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="PH0-OSC-IN" class="0">
-<segment>
-<pinref part="Y1" gate="G$1" pin="2"/>
-<wire x1="7.62" y1="213.36" x2="7.62" y2="215.9" width="0.1524" layer="91"/>
-<wire x1="7.62" y1="215.9" x2="-40.64" y2="215.9" width="0.1524" layer="91"/>
-<label x="-40.64" y="215.9" size="1.778" layer="95"/>
-<wire x1="7.62" y1="215.9" x2="25.4" y2="215.9" width="0.1524" layer="91"/>
-<junction x="7.62" y="215.9"/>
-<pinref part="C35" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="PC15-OSC32-OUT" class="0">
-<segment>
-<wire x1="22.86" y1="170.18" x2="-2.54" y2="170.18" width="0.1524" layer="91"/>
-<label x="-45.72" y="170.18" size="1.778" layer="95"/>
-<pinref part="C2" gate="G$1" pin="1"/>
-<pinref part="J1" gate="G$1" pin="2"/>
-<wire x1="-2.54" y1="170.18" x2="-48.26" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="175.26" x2="-2.54" y2="170.18" width="0.1524" layer="91"/>
-<junction x="-2.54" y="170.18"/>
-</segment>
-</net>
-<net name="PC14-OSC32-IN" class="0">
-<segment>
-<wire x1="22.86" y1="185.42" x2="-2.54" y2="185.42" width="0.1524" layer="91"/>
-<label x="-45.72" y="185.42" size="1.778" layer="95"/>
-<pinref part="C37" gate="G$1" pin="1"/>
-<pinref part="J1" gate="G$1" pin="1"/>
-<wire x1="-2.54" y1="185.42" x2="-48.26" y2="185.42" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="177.8" x2="-2.54" y2="185.42" width="0.1524" layer="91"/>
-<junction x="-2.54" y="185.42"/>
-</segment>
-</net>
 <net name="5V_IN" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="VUSB"/>
@@ -5121,17 +4723,6 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <pinref part="U$1" gate="G$1" pin="A"/>
 <wire x1="299.72" y1="213.36" x2="299.72" y2="218.44" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="Y1" gate="G$1" pin="1"/>
-<wire x1="-12.7" y1="200.66" x2="7.62" y2="200.66" width="0.1524" layer="91"/>
-<wire x1="7.62" y1="203.2" x2="7.62" y2="200.66" width="0.1524" layer="91"/>
-<wire x1="7.62" y1="200.66" x2="25.4" y2="200.66" width="0.1524" layer="91"/>
-<junction x="7.62" y="200.66"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<pinref part="C3" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="SWO" class="0">
