@@ -3637,7 +3637,7 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <part name="S1" library="ce-capstone-2022" deviceset="SWITCH-TACT_DTSM-6" device=""/>
 <part name="D1" library="ce-capstone-2022" deviceset="1N5819HW-7-F_1N5819HW-7-F" device=""/>
 <part name="FRAME2" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_C_L" device=""/>
-<part name="BAROMETER" library="DPS310XTSA1" deviceset="DPS310XTSA1" device=""/>
+<part name="BAR" library="DPS310XTSA1" deviceset="DPS310XTSA1" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C6" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402-6.3V-10%-X7R" value="0.1uF"/>
@@ -3836,7 +3836,7 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <attribute name="SHEET" x="342.9" y="-140.97" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="274.32" y="-123.19" size="2.54" layer="94"/>
 </instance>
-<instance part="BAROMETER" gate="G$1" x="-7.62" y="55.88" smashed="yes">
+<instance part="BAR" gate="G$1" x="-7.62" y="55.88" smashed="yes">
 <attribute name="NAME" x="19.05" y="63.5" size="1.778" layer="95" align="center-left"/>
 <attribute name="VALUE" x="-3.81" y="60.96" size="1.778" layer="96" align="center-left"/>
 </instance>
@@ -4142,12 +4142,12 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <label x="-139.7" y="-25.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="BAROMETER" gate="G$1" pin="GND_1"/>
+<pinref part="BAR" gate="G$1" pin="GND_1"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="-7.62" y1="48.26" x2="-12.7" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="BAROMETER" gate="G$1" pin="GND_2"/>
+<pinref part="BAR" gate="G$1" pin="GND_2"/>
 <pinref part="GND8" gate="1" pin="GND"/>
 <wire x1="22.86" y1="50.8" x2="35.56" y2="50.8" width="0.1524" layer="91"/>
 </segment>
@@ -4333,7 +4333,7 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <label x="-139.7" y="-30.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="BAROMETER" gate="G$1" pin="VDDIO"/>
+<pinref part="BAR" gate="G$1" pin="VDDIO"/>
 <pinref part="L7" gate="A" pin="1"/>
 <wire x1="58.42" y1="38.1" x2="60.96" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="38.1" x2="60.96" y2="53.34" width="0.1524" layer="91"/>
@@ -4346,12 +4346,12 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <label x="78.74" y="53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="BAROMETER" gate="G$1" pin="SDO"/>
+<pinref part="BAR" gate="G$1" pin="SDO"/>
 <wire x1="22.86" y1="55.88" x2="25.4" y2="55.88" width="0.1524" layer="91"/>
 <label x="22.86" y="55.88" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="BAROMETER" gate="G$1" pin="CSB"/>
+<pinref part="BAR" gate="G$1" pin="CSB"/>
 <wire x1="-7.62" y1="50.8" x2="-17.78" y2="50.8" width="0.1524" layer="91"/>
 <label x="-15.24" y="50.8" size="1.778" layer="95"/>
 </segment>
@@ -4610,12 +4610,7 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 </net>
 <net name="I2C2_SCL" class="0">
 <segment>
-<pinref part="JP1" gate="A" pin="10"/>
-<wire x1="-111.76" y1="-35.56" x2="-88.9" y2="-35.56" width="0.1524" layer="91"/>
-<label x="-101.6" y="-35.56" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="BAROMETER" gate="G$1" pin="SCK"/>
+<pinref part="BAR" gate="G$1" pin="SCK"/>
 <wire x1="-7.62" y1="55.88" x2="-15.24" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="-15.24" y1="55.88" x2="-20.32" y2="55.88" width="0.1524" layer="91"/>
@@ -4627,15 +4622,15 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <label x="200.66" y="-50.8" size="1.778" layer="95" rot="R90"/>
 <pinref part="IC1" gate="G$1" pin="PB10"/>
 </segment>
+<segment>
+<wire x1="-88.9" y1="-38.1" x2="-111.76" y2="-38.1" width="0.1524" layer="91"/>
+<label x="-101.6" y="-38.1" size="1.778" layer="95"/>
+<pinref part="JP1" gate="A" pin="12"/>
+</segment>
 </net>
 <net name="I2C2_SDA" class="0">
 <segment>
-<pinref part="JP1" gate="A" pin="12"/>
-<wire x1="-111.76" y1="-38.1" x2="-88.9" y2="-38.1" width="0.1524" layer="91"/>
-<label x="-101.6" y="-38.1" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="BAROMETER" gate="G$1" pin="SDI"/>
+<pinref part="BAR" gate="G$1" pin="SDI"/>
 <wire x1="-7.62" y1="53.34" x2="-30.48" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="-30.48" y1="53.34" x2="-38.1" y2="53.34" width="0.1524" layer="91"/>
@@ -4646,6 +4641,11 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <wire x1="203.2" y1="-35.56" x2="203.2" y2="-50.8" width="0.1524" layer="91"/>
 <label x="203.2" y="-50.8" size="1.778" layer="95" rot="R90"/>
 <pinref part="IC1" gate="G$1" pin="PB11"/>
+</segment>
+<segment>
+<wire x1="-88.9" y1="-35.56" x2="-111.76" y2="-35.56" width="0.1524" layer="91"/>
+<label x="-101.6" y="-35.56" size="1.778" layer="95"/>
+<pinref part="JP1" gate="A" pin="10"/>
 </segment>
 </net>
 <net name="I2C3_SCL" class="0">
@@ -4693,7 +4693,7 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <wire x1="30.48" y1="38.1" x2="20.32" y2="38.1" width="0.1524" layer="91"/>
 <junction x="30.48" y="38.1"/>
 <pinref part="C8" gate="G$1" pin="1"/>
-<pinref part="BAROMETER" gate="G$1" pin="VDD"/>
+<pinref part="BAR" gate="G$1" pin="VDD"/>
 <wire x1="22.86" y1="48.26" x2="30.48" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="48.26" x2="30.48" y2="38.1" width="0.1524" layer="91"/>
 </segment>
@@ -4838,6 +4838,11 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <wire x1="160.02" y1="167.64" x2="175.26" y2="167.64" width="0.1524" layer="91"/>
 <label x="162.56" y="167.64" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="JP1" gate="A" pin="2"/>
+<wire x1="-111.76" y1="-25.4" x2="-88.9" y2="-25.4" width="0.1524" layer="91"/>
+<label x="-101.6" y="-25.4" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$8" class="0">
 <segment>
@@ -4862,12 +4867,22 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <label x="220.98" y="12.7" size="1.778" layer="95"/>
 <pinref part="IC1" gate="G$1" pin="PA12"/>
 </segment>
+<segment>
+<pinref part="JP4" gate="A" pin="3"/>
+<wire x1="-124.46" y1="33.02" x2="-134.62" y2="33.02" width="0.1524" layer="91"/>
+<label x="-134.62" y="33.02" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="USB_DN" class="0">
 <segment>
 <wire x1="215.9" y1="10.16" x2="228.6" y2="10.16" width="0.1524" layer="91"/>
 <label x="220.98" y="10.16" size="1.778" layer="95"/>
 <pinref part="IC1" gate="G$1" pin="PA11"/>
+</segment>
+<segment>
+<pinref part="JP4" gate="A" pin="5"/>
+<wire x1="-124.46" y1="30.48" x2="-134.62" y2="30.48" width="0.1524" layer="91"/>
+<label x="-134.62" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -4975,6 +4990,11 @@ Source: &lt;a href="https://ae-bst.resource.bosch.com/media/_tech/media/datashee
 <pinref part="R18" gate="G$1" pin="2"/>
 <wire x1="160.02" y1="147.32" x2="175.26" y2="147.32" width="0.1524" layer="91"/>
 <label x="162.56" y="147.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="A" pin="8"/>
+<wire x1="-111.76" y1="-33.02" x2="-88.9" y2="-33.02" width="0.1524" layer="91"/>
+<label x="-101.6" y="-33.02" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
