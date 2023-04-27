@@ -4204,6 +4204,368 @@ DIN A3, landscape with extra doc field</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="ic-package" urn="urn:adsk.eagle:library:239">
+<description>&lt;b&gt;IC Packages an Sockets&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="DIL24-3" urn="urn:adsk.eagle:footprint:3288/1" library_version="4">
+<description>&lt;b&gt;Dual In Line Package&lt;/b&gt; 0.3 inch</description>
+<wire x1="-14.986" y1="-0.635" x2="-14.986" y2="-2.794" width="0.1524" layer="21"/>
+<wire x1="-14.986" y1="0.635" x2="-14.986" y2="-0.635" width="0.1524" layer="21" curve="-180"/>
+<wire x1="14.986" y1="-2.794" x2="14.986" y2="2.794" width="0.1524" layer="21"/>
+<wire x1="-14.986" y1="-2.794" x2="14.986" y2="-2.794" width="0.1524" layer="21"/>
+<wire x1="-14.986" y1="2.794" x2="14.986" y2="2.794" width="0.1524" layer="21"/>
+<wire x1="-14.986" y1="2.794" x2="-14.986" y2="0.635" width="0.1524" layer="21"/>
+<pad name="1" x="-13.97" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="2" x="-11.43" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="3" x="-8.89" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="4" x="-6.35" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="5" x="-3.81" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="6" x="-1.27" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="7" x="1.27" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="8" x="3.81" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="9" x="6.35" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="10" x="8.89" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="11" x="11.43" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="12" x="13.97" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="13" x="13.97" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="14" x="11.43" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="15" x="8.89" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="16" x="6.35" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="17" x="3.81" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="18" x="1.27" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="19" x="-1.27" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="20" x="-3.81" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="21" x="-6.35" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="22" x="-8.89" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="23" x="-11.43" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="24" x="-13.97" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<text x="-15.2908" y="-2.667" size="1.778" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="-13.462" y="-0.889" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+<package name="DIL24-4" urn="urn:adsk.eagle:footprint:14357/1" library_version="4">
+<description>&lt;b&gt;Dual In Line Package&lt;/b&gt; 0.4 inch</description>
+<wire x1="-15.367" y1="-0.635" x2="-15.367" y2="-4.064" width="0.1524" layer="21"/>
+<wire x1="-15.367" y1="0.635" x2="-15.367" y2="-0.635" width="0.1524" layer="21" curve="-180"/>
+<wire x1="15.367" y1="-4.064" x2="15.367" y2="4.064" width="0.1524" layer="21"/>
+<wire x1="-15.367" y1="-4.064" x2="15.367" y2="-4.064" width="0.1524" layer="21"/>
+<wire x1="-15.367" y1="4.064" x2="-15.367" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-15.367" y1="4.064" x2="15.367" y2="4.064" width="0.1524" layer="21"/>
+<pad name="1" x="-13.97" y="-5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="2" x="-11.43" y="-5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="3" x="-8.89" y="-5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="4" x="-6.35" y="-5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="5" x="-3.81" y="-5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="6" x="-1.27" y="-5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="7" x="1.27" y="-5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="8" x="3.81" y="-5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="9" x="6.35" y="-5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="10" x="8.89" y="-5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="11" x="11.43" y="-5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="12" x="13.97" y="-5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="13" x="13.97" y="5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="14" x="11.43" y="5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="15" x="8.89" y="5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="16" x="6.35" y="5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="17" x="3.81" y="5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="18" x="1.27" y="5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="19" x="-1.27" y="5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="20" x="-3.81" y="5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="21" x="-6.35" y="5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="22" x="-8.89" y="5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="23" x="-11.43" y="5.08" drill="0.8128" shape="long" rot="R90"/>
+<pad name="24" x="-13.97" y="5.08" drill="0.8128" shape="long" rot="R90"/>
+<text x="-15.6464" y="-3.81" size="1.778" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="-12.7" y="-0.8382" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+<package name="DIL24-6" urn="urn:adsk.eagle:footprint:943/1" library_version="4">
+<description>&lt;b&gt;Dual In Line Package&lt;/b&gt; 0.6 inch</description>
+<wire x1="-15.113" y1="-1.27" x2="-15.113" y2="-6.604" width="0.1524" layer="21"/>
+<wire x1="-15.113" y1="1.27" x2="-15.113" y2="-1.27" width="0.1524" layer="21" curve="-180"/>
+<wire x1="15.113" y1="-6.604" x2="15.113" y2="6.604" width="0.1524" layer="21"/>
+<wire x1="-15.113" y1="6.604" x2="-15.113" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-15.113" y1="6.604" x2="15.113" y2="6.604" width="0.1524" layer="21"/>
+<wire x1="-15.113" y1="-6.604" x2="15.113" y2="-6.604" width="0.1524" layer="21"/>
+<pad name="1" x="-13.97" y="-7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="2" x="-11.43" y="-7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="3" x="-8.89" y="-7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="4" x="-6.35" y="-7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="5" x="-3.81" y="-7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="6" x="-1.27" y="-7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="7" x="1.27" y="-7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="8" x="3.81" y="-7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="9" x="6.35" y="-7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="10" x="8.89" y="-7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="11" x="11.43" y="-7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="12" x="13.97" y="-7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="13" x="13.97" y="7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="14" x="11.43" y="7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="15" x="8.89" y="7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="16" x="6.35" y="7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="17" x="3.81" y="7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="18" x="1.27" y="7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="19" x="-1.27" y="7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="20" x="-3.81" y="7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="21" x="-6.35" y="7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="22" x="-8.89" y="7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="23" x="-11.43" y="7.62" drill="0.8128" shape="long" rot="R90"/>
+<pad name="24" x="-13.97" y="7.62" drill="0.8128" shape="long" rot="R90"/>
+<text x="-15.621" y="-6.35" size="1.778" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="-12.065" y="-0.889" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+<package name="DIL24-9" urn="urn:adsk.eagle:footprint:14359/1" library_version="4">
+<description>&lt;b&gt;Dual In Line Package&lt;/b&gt; 0.9 inch</description>
+<wire x1="-16.129" y1="-1.27" x2="-16.129" y2="-10.414" width="0.1524" layer="21"/>
+<wire x1="-16.129" y1="1.27" x2="-16.129" y2="-1.27" width="0.1524" layer="21" curve="-180"/>
+<wire x1="16.129" y1="-10.414" x2="16.129" y2="10.414" width="0.1524" layer="21"/>
+<wire x1="-16.129" y1="10.414" x2="-16.129" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-16.129" y1="10.414" x2="16.129" y2="10.414" width="0.1524" layer="21"/>
+<wire x1="-16.129" y1="-10.414" x2="16.129" y2="-10.414" width="0.1524" layer="21"/>
+<pad name="1" x="-13.97" y="-11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="2" x="-11.43" y="-11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="3" x="-8.89" y="-11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="4" x="-6.35" y="-11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="5" x="-3.81" y="-11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="6" x="-1.27" y="-11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="7" x="1.27" y="-11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="8" x="3.81" y="-11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="9" x="6.35" y="-11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="10" x="8.89" y="-11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="11" x="11.43" y="-11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="12" x="13.97" y="-11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="13" x="13.97" y="11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="14" x="11.43" y="11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="15" x="8.89" y="11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="16" x="6.35" y="11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="17" x="3.81" y="11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="18" x="1.27" y="11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="19" x="-1.27" y="11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="20" x="-3.81" y="11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="21" x="-6.35" y="11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="22" x="-8.89" y="11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="23" x="-11.43" y="11.43" drill="0.8128" shape="long" rot="R90"/>
+<pad name="24" x="-13.97" y="11.43" drill="0.8128" shape="long" rot="R90"/>
+<text x="-16.51" y="-9.906" size="1.778" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="-11.43" y="-0.635" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+</packages>
+<packages3d>
+<package3d name="DIL24-3" urn="urn:adsk.eagle:package:3299/3" type="model" library_version="4">
+<description>Dual In Line Package 0.3 inch</description>
+<packageinstances>
+<packageinstance name="DIL24-3"/>
+</packageinstances>
+</package3d>
+<package3d name="DIL24-4" urn="urn:adsk.eagle:package:14447/2" type="model" library_version="4">
+<description>Dual In Line Package 0.4 inch</description>
+<packageinstances>
+<packageinstance name="DIL24-4"/>
+</packageinstances>
+</package3d>
+<package3d name="DIL24-6" urn="urn:adsk.eagle:package:1009/2" type="model" library_version="4">
+<description>Dual In Line Package 0.6 inch</description>
+<packageinstances>
+<packageinstance name="DIL24-6"/>
+</packageinstances>
+</package3d>
+<package3d name="DIL24-9" urn="urn:adsk.eagle:package:14450/2" type="model" library_version="4">
+<description>Dual In Line Package 0.9 inch</description>
+<packageinstances>
+<packageinstance name="DIL24-9"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="DIL24" urn="urn:adsk.eagle:symbol:14355/1" library_version="4">
+<wire x1="-5.08" y1="16.51" x2="-5.08" y2="-13.97" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-13.97" x2="5.08" y2="-13.97" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-13.97" x2="5.08" y2="16.51" width="0.254" layer="94"/>
+<wire x1="5.08" y1="16.51" x2="2.54" y2="16.51" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="16.51" x2="-2.54" y2="16.51" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="16.51" x2="2.54" y2="16.51" width="0.254" layer="94" curve="180"/>
+<text x="-4.445" y="17.145" size="1.778" layer="95">&gt;NAME</text>
+<text x="-4.445" y="-16.51" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-7.62" y="15.24" visible="pad" length="short" direction="pas"/>
+<pin name="2" x="-7.62" y="12.7" visible="pad" length="short" direction="pas"/>
+<pin name="3" x="-7.62" y="10.16" visible="pad" length="short" direction="pas"/>
+<pin name="4" x="-7.62" y="7.62" visible="pad" length="short" direction="pas"/>
+<pin name="5" x="-7.62" y="5.08" visible="pad" length="short" direction="pas"/>
+<pin name="6" x="-7.62" y="2.54" visible="pad" length="short" direction="pas"/>
+<pin name="7" x="-7.62" y="0" visible="pad" length="short" direction="pas"/>
+<pin name="8" x="-7.62" y="-2.54" visible="pad" length="short" direction="pas"/>
+<pin name="9" x="-7.62" y="-5.08" visible="pad" length="short" direction="pas"/>
+<pin name="10" x="-7.62" y="-7.62" visible="pad" length="short" direction="pas"/>
+<pin name="11" x="-7.62" y="-10.16" visible="pad" length="short" direction="pas"/>
+<pin name="12" x="-7.62" y="-12.7" visible="pad" length="short" direction="pas"/>
+<pin name="13" x="7.62" y="-12.7" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="14" x="7.62" y="-10.16" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="15" x="7.62" y="-7.62" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="16" x="7.62" y="-5.08" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="17" x="7.62" y="-2.54" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="18" x="7.62" y="0" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="19" x="7.62" y="2.54" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="20" x="7.62" y="5.08" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="21" x="7.62" y="7.62" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="22" x="7.62" y="10.16" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="23" x="7.62" y="12.7" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="24" x="7.62" y="15.24" visible="pad" length="short" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="DIL24" urn="urn:adsk.eagle:component:14479/4" prefix="IC" uservalue="yes" library_version="4">
+<description>&lt;b&gt;Dual In Line&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="DIL24" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-3" package="DIL24-3">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="10" pad="10"/>
+<connect gate="G$1" pin="11" pad="11"/>
+<connect gate="G$1" pin="12" pad="12"/>
+<connect gate="G$1" pin="13" pad="13"/>
+<connect gate="G$1" pin="14" pad="14"/>
+<connect gate="G$1" pin="15" pad="15"/>
+<connect gate="G$1" pin="16" pad="16"/>
+<connect gate="G$1" pin="17" pad="17"/>
+<connect gate="G$1" pin="18" pad="18"/>
+<connect gate="G$1" pin="19" pad="19"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="20" pad="20"/>
+<connect gate="G$1" pin="21" pad="21"/>
+<connect gate="G$1" pin="22" pad="22"/>
+<connect gate="G$1" pin="23" pad="23"/>
+<connect gate="G$1" pin="24" pad="24"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="9" pad="9"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:3299/3"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-4" package="DIL24-4">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="10" pad="10"/>
+<connect gate="G$1" pin="11" pad="11"/>
+<connect gate="G$1" pin="12" pad="12"/>
+<connect gate="G$1" pin="13" pad="13"/>
+<connect gate="G$1" pin="14" pad="14"/>
+<connect gate="G$1" pin="15" pad="15"/>
+<connect gate="G$1" pin="16" pad="16"/>
+<connect gate="G$1" pin="17" pad="17"/>
+<connect gate="G$1" pin="18" pad="18"/>
+<connect gate="G$1" pin="19" pad="19"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="20" pad="20"/>
+<connect gate="G$1" pin="21" pad="21"/>
+<connect gate="G$1" pin="22" pad="22"/>
+<connect gate="G$1" pin="23" pad="23"/>
+<connect gate="G$1" pin="24" pad="24"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="9" pad="9"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:14447/2"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-6" package="DIL24-6">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="10" pad="10"/>
+<connect gate="G$1" pin="11" pad="11"/>
+<connect gate="G$1" pin="12" pad="12"/>
+<connect gate="G$1" pin="13" pad="13"/>
+<connect gate="G$1" pin="14" pad="14"/>
+<connect gate="G$1" pin="15" pad="15"/>
+<connect gate="G$1" pin="16" pad="16"/>
+<connect gate="G$1" pin="17" pad="17"/>
+<connect gate="G$1" pin="18" pad="18"/>
+<connect gate="G$1" pin="19" pad="19"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="20" pad="20"/>
+<connect gate="G$1" pin="21" pad="21"/>
+<connect gate="G$1" pin="22" pad="22"/>
+<connect gate="G$1" pin="23" pad="23"/>
+<connect gate="G$1" pin="24" pad="24"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="9" pad="9"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:1009/2"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-9" package="DIL24-9">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="10" pad="10"/>
+<connect gate="G$1" pin="11" pad="11"/>
+<connect gate="G$1" pin="12" pad="12"/>
+<connect gate="G$1" pin="13" pad="13"/>
+<connect gate="G$1" pin="14" pad="14"/>
+<connect gate="G$1" pin="15" pad="15"/>
+<connect gate="G$1" pin="16" pad="16"/>
+<connect gate="G$1" pin="17" pad="17"/>
+<connect gate="G$1" pin="18" pad="18"/>
+<connect gate="G$1" pin="19" pad="19"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="20" pad="20"/>
+<connect gate="G$1" pin="21" pad="21"/>
+<connect gate="G$1" pin="22" pad="22"/>
+<connect gate="G$1" pin="23" pad="23"/>
+<connect gate="G$1" pin="24" pad="24"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="9" pad="9"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:14450/2"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -4291,8 +4653,8 @@ DIN A3, landscape with extra doc field</description>
 <part name="GND27" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U1" library="TPD4F003DQDR" deviceset="TPD4F003DQDR" device=""/>
 <part name="SV1" library="con-lsta" library_urn="urn:adsk.eagle:library:161" deviceset="FE05-1" device="" package3d_urn="urn:adsk.eagle:package:8190/1"/>
-<part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X3" device="" package3d_urn="urn:adsk.eagle:package:22462/2"/>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA3_L" device=""/>
+<part name="IC2" library="ic-package" library_urn="urn:adsk.eagle:library:239" deviceset="DIL24" device="-6" package3d_urn="urn:adsk.eagle:package:1009/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -4579,15 +4941,15 @@ DIN A3, landscape with extra doc field</description>
 <attribute name="VALUE" x="102.87" y="78.74" size="1.778" layer="96"/>
 <attribute name="NAME" x="102.87" y="97.282" size="1.778" layer="95"/>
 </instance>
-<instance part="JP1" gate="A" x="165.1" y="119.38" smashed="yes">
-<attribute name="NAME" x="158.75" y="125.095" size="1.778" layer="95"/>
-<attribute name="VALUE" x="158.75" y="111.76" size="1.778" layer="96"/>
-</instance>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
 <instance part="FRAME1" gate="G$2" x="287.02" y="0" smashed="yes">
 <attribute name="LAST_DATE_TIME" x="299.72" y="1.27" size="2.54" layer="94"/>
 <attribute name="SHEET" x="373.38" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="304.8" y="19.05" size="2.54" layer="94"/>
+</instance>
+<instance part="IC2" gate="G$1" x="162.56" y="114.3" smashed="yes">
+<attribute name="NAME" x="158.115" y="131.445" size="1.778" layer="95"/>
+<attribute name="VALUE" x="158.115" y="97.79" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -4759,14 +5121,14 @@ DIN A3, landscape with extra doc field</description>
 <pinref part="SV1" gate="G$1" pin="5"/>
 </segment>
 <segment>
-<wire x1="162.56" y1="119.38" x2="142.24" y2="119.38" width="0.1524" layer="91"/>
-<label x="142.24" y="119.38" size="1.778" layer="95"/>
-<pinref part="JP1" gate="A" pin="3"/>
+<wire x1="154.94" y1="127" x2="134.62" y2="127" width="0.1524" layer="91"/>
+<label x="134.62" y="127" size="1.778" layer="95"/>
+<pinref part="IC2" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<wire x1="162.56" y1="121.92" x2="142.24" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="A" pin="1"/>
-<label x="142.24" y="121.92" size="1.778" layer="95"/>
+<wire x1="154.94" y1="129.54" x2="134.62" y2="129.54" width="0.1524" layer="91"/>
+<label x="134.62" y="129.54" size="1.778" layer="95"/>
+<pinref part="IC2" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="USART1_RX" class="0">
@@ -4973,9 +5335,9 @@ DIN A3, landscape with extra doc field</description>
 <pinref part="SV1" gate="G$1" pin="4"/>
 </segment>
 <segment>
-<wire x1="162.56" y1="116.84" x2="142.24" y2="116.84" width="0.1524" layer="91"/>
-<label x="142.24" y="116.84" size="1.778" layer="95"/>
-<pinref part="JP1" gate="A" pin="5"/>
+<wire x1="170.18" y1="101.6" x2="190.5" y2="101.6" width="0.1524" layer="91"/>
+<label x="185.42" y="101.6" size="1.778" layer="95"/>
+<pinref part="IC2" gate="G$1" pin="13"/>
 </segment>
 </net>
 <net name="I2C2_SCL" class="0">
@@ -5126,9 +5488,9 @@ DIN A3, landscape with extra doc field</description>
 <label x="121.92" y="241.3" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<wire x1="190.5" y1="119.38" x2="170.18" y2="119.38" width="0.1524" layer="91"/>
-<label x="185.42" y="119.38" size="1.778" layer="95"/>
-<pinref part="JP1" gate="A" pin="4"/>
+<wire x1="190.5" y1="121.92" x2="170.18" y2="121.92" width="0.1524" layer="91"/>
+<label x="185.42" y="121.92" size="1.778" layer="95"/>
+<pinref part="IC2" gate="G$1" pin="21"/>
 </segment>
 </net>
 <net name="I2C1_SCL" class="0">
@@ -5143,9 +5505,9 @@ DIN A3, landscape with extra doc field</description>
 <label x="124.46" y="241.3" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<wire x1="190.5" y1="121.92" x2="170.18" y2="121.92" width="0.1524" layer="91"/>
-<label x="185.42" y="121.92" size="1.778" layer="95"/>
-<pinref part="JP1" gate="A" pin="2"/>
+<wire x1="190.5" y1="119.38" x2="170.18" y2="119.38" width="0.1524" layer="91"/>
+<label x="185.42" y="119.38" size="1.778" layer="95"/>
+<pinref part="IC2" gate="G$1" pin="20"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -5567,9 +5929,9 @@ DIN A3, landscape with extra doc field</description>
 <label x="53.34" y="208.28" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="170.18" y1="116.84" x2="185.42" y2="116.84" width="0.1524" layer="91"/>
-<label x="185.42" y="116.84" size="1.778" layer="95"/>
-<pinref part="JP1" gate="A" pin="6"/>
+<wire x1="170.18" y1="106.68" x2="190.5" y2="106.68" width="0.1524" layer="91"/>
+<label x="185.42" y="106.68" size="1.778" layer="95"/>
+<pinref part="IC2" gate="G$1" pin="15"/>
 </segment>
 </net>
 <net name="N$8" class="0">
