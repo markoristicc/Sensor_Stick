@@ -1,0 +1,22 @@
+[0.384s] Invoking command in '/home/dragonfly/ros2_ws/src/talker_listener': PYTHONPATH=/home/dragonfly/ros2_ws/build/talker_listener/prefix_override:/home/dragonfly/ros2_ws/install/talker_listener/lib/python3.10/site-packages: /usr/bin/python3 setup.py egg_info --egg-base ../../build/talker_listener build --build-base /home/dragonfly/ros2_ws/build/talker_listener/build install --record /home/dragonfly/ros2_ws/build/talker_listener/install.log --single-version-externally-managed
+[0.520s] running egg_info
+[0.520s] writing ../../build/talker_listener/talker_listener.egg-info/PKG-INFO
+[0.520s] writing dependency_links to ../../build/talker_listener/talker_listener.egg-info/dependency_links.txt
+[0.521s] writing entry points to ../../build/talker_listener/talker_listener.egg-info/entry_points.txt
+[0.521s] writing requirements to ../../build/talker_listener/talker_listener.egg-info/requires.txt
+[0.521s] writing top-level names to ../../build/talker_listener/talker_listener.egg-info/top_level.txt
+[0.522s] reading manifest file '../../build/talker_listener/talker_listener.egg-info/SOURCES.txt'
+[0.523s] writing manifest file '../../build/talker_listener/talker_listener.egg-info/SOURCES.txt'
+[0.523s] running build
+[0.523s] running build_py
+[0.524s] running install
+[0.524s] running install_lib
+[0.525s] running install_data
+[0.526s] running install_egg_info
+[0.527s] removing '/home/dragonfly/ros2_ws/install/talker_listener/lib/python3.10/site-packages/talker_listener-0.0.0-py3.10.egg-info' (and everything under it)
+[0.527s] Copying ../../build/talker_listener/talker_listener.egg-info to /home/dragonfly/ros2_ws/install/talker_listener/lib/python3.10/site-packages/talker_listener-0.0.0-py3.10.egg-info
+[0.528s] running install_scripts
+[0.541s] Installing listenerNode script to /home/dragonfly/ros2_ws/install/talker_listener/lib/talker_listener
+[0.541s] Installing talkerNode script to /home/dragonfly/ros2_ws/install/talker_listener/lib/talker_listener
+[0.541s] writing list of installed files to '/home/dragonfly/ros2_ws/build/talker_listener/install.log'
+[0.556s] Invoked command in '/home/dragonfly/ros2_ws/src/talker_listener' returned '0': PYTHONPATH=/home/dragonfly/ros2_ws/build/talker_listener/prefix_override:/home/dragonfly/ros2_ws/install/talker_listener/lib/python3.10/site-packages: /usr/bin/python3 setup.py egg_info --egg-base ../../build/talker_listener build --build-base /home/dragonfly/ros2_ws/build/talker_listener/build install --record /home/dragonfly/ros2_ws/build/talker_listener/install.log --single-version-externally-managed
