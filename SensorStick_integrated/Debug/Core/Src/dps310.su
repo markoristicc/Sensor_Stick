@@ -1,0 +1,5 @@
+../Core/Src/dps310.c:42:6:uprintf	16	static
+../Core/Src/dps310.c:47:6:getTwosComplement	16	static
+../Core/Src/dps310.c:56:6:read_callibration_data	88	static
+../Core/Src/dps310.c:116:7:DPS310_GetPress	72	static
+../Core/Src/dps310.c:166:6:DPS310_Start	8	static
