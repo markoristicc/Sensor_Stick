@@ -1,0 +1,5 @@
+dps310.c:38:6:uprintf	1
+dps310.c:43:6:getTwosComplement	2
+dps310.c:52:6:read_callibration_data	1
+dps310.c:112:7:DPS310_GetPress	1
+dps310.c:146:6:DPS310_Start	1
