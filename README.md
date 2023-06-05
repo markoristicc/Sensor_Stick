@@ -1,3 +1,9 @@
-# Sensor_Stick
+# Dragonfly
 
-Technically Dragonfly
+##Overview 
+
+
+##Getting Data off the Dragonfly
+
+
+##Performing Visualizations
