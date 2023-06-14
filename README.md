@@ -8,7 +8,9 @@ The files containing the dragonfly PCB driver code can be found in the /Integrat
 
 ## Getting Data off the Dragonfly for your own use
 
-If you want to use the Dragonfly simply to collect data, we have provided code to do so, located in /DataRetreival . If you are not already familiar with ROS, visiting this documentation may be helpful. The code we are using assumes that you are running using ROS Humble on Ubuntu 22.02 and are using Python 3 >. In essence, this data parses the packet sent by the dragonfly and composes a custom message composed of the following message types: sensor_msgs/Imu, sensor_msgs/MagneticField, sensor_msgs/NavSatTransform, rosflight_msgs/Barometer, and rosflight_msgs/Airspeed. This message is published to the topic 'topic' (which can be changed in UAVFirmware/src/talker_listener/talker_listener/talker.py). To run the publisher enter the following commands into your terminal:
+If you want to use the Dragonfly simply to collect data, we have provided code to do so, located in /DataRetreival . If you are not already familiar with ROS, visiting this documentation may be helpful. The code we are using assumes that you are running using ROS Humble on Ubuntu 22.02 and are using Python 3 >. 
+
+In essence, this data parses the packet sent by the dragonfly and composes a custom message composed of the following message types: sensor_msgs/Imu, sensor_msgs/MagneticField, sensor_msgs/NavSatTransform, rosflight_msgs/Barometer, and rosflight_msgs/Airspeed. This message is published to the topic 'topic' (which can be changed in UAVFirmware/src/talker_listener/talker_listener/talker.py). To run the publisher enter the following commands into your terminal:
 
 ```
 source /opt/ros/humble/setup.bash
