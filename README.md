@@ -1,3 +1,3 @@
-# Sensor_Stick
+# Dragonfly
 
-Technically Dragonfly, see prod branch for documentation.
+see prod branch for documentation.
