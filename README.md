@@ -22,7 +22,7 @@ source install/setup.bash
 ros2 run talker_listener talkerNode
 ```
 
-And from there your ROS pubisher will be publishing these custom messages to 'topic' at a rate of 100Hz!
+And from there your ROS pubisher will be publishing data from the dragonfly to 'topic' at a rate of 100Hz!
 
 
 ## Performing Visualizations
